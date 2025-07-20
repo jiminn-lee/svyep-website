@@ -7,4 +7,15 @@
 	--font-sans: 'Urbanist', 'sans-serif';
 	--font-serif: 'Baskervville', 'sans-serif';
 	--font-display: 'GFS Didot', 'sans-serif';
+	--text-shadow-glow-white: rgba(255, 255, 255, 0.5) 0px 0px 4px;
+	--text-shadow-glow-blue: rgba(4, 51, 140, 1) 0px 0px 4px;
+	--shadow-glow-blue:
+		0px 0px 20px rgba(67, 56, 202, 0.5), 0px 5px 5px -1px rgba(165, 180, 252, 0.1),
+		inset 2px 2px 8px rgba(165, 180, 252, 0.5), inset -4px -4px 8px rgba(67, 56, 202, 0.35);
+	--shadow-glow-blue-hover:
+		0px 0px 30px rgba(67, 56, 202, 0.8), 0px 5px 5px -1px rgba(165, 180, 252, 0.1),
+		inset 2px 2px 8px rgba(165, 180, 252, 0.5), inset -4px -4px 8px rgba(55, 48, 163, 0.35);
+	--shadow-glow-gray:
+		0px 0px 20px rgba(31, 41, 55, 0.5), 0px 5px 5px -1px rgba(17, 24, 39, 0.1),
+		inset 2px 2px 8px rgba(55, 65, 81, 0.5), inset -4px -4px 8px rgba(17, 24, 39, 0.35);
 }
