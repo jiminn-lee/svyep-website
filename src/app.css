@@ -19,3 +19,20 @@
 		0px 0px 20px rgba(31, 41, 55, 0.5), 0px 5px 5px -1px rgba(17, 24, 39, 0.1),
 		inset 2px 2px 8px rgba(55, 65, 81, 0.5), inset -4px -4px 8px rgba(17, 24, 39, 0.35);
 }
+
+::-webkit-scrollbar {
+	width: 1px;
+}
+
+::-webkit-scrollbar-track {
+	background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #c7d2fe;
+	border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: white;
+}

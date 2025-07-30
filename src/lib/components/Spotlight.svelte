@@ -32,10 +32,7 @@
 	});
 </script>
 
-<div
-	bind:this={spotlightParent}
-	class="pointer-events-none absolute inset-0 h-full w-full overflow-hidden"
->
+<div bind:this={spotlightParent} class="pointer-events-none absolute inset-0 h-full w-full">
 	<div
 		bind:this={spotlightLeft}
 		class="pointer-events-none absolute top-0 left-0 z-40 h-screen w-screen"
@@ -68,7 +65,10 @@
       "
 		></div>
 	</div>
-	<div bind:this={spotlightRight}>
+	<div
+		bind:this={spotlightRight}
+		class="pointer-events-none absolute top-0 right-0 z-40 h-screen w-screen"
+	>
 		<div
 			class="absolute top-0 right-0"
 			style="

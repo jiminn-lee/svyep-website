@@ -5,5 +5,9 @@
 	let { children } = $props();
 </script>
 
-<Navbar />
-{@render children()}
+<div
+	class="overflow-x-clip scroll-smooth bg-zinc-950 antialiased selection:bg-indigo-700 selection:text-white"
+>
+	<Navbar />
+	{@render children()}
+</div>
