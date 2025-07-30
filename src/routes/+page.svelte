@@ -2,7 +2,8 @@
 	import Button from '$lib/components/Button.svelte';
 	import Spotlight from '$lib/components/Spotlight.svelte';
 	import { DotLottieSvelte } from '@lottiefiles/dotlottie-svelte';
-	import ArrowDown from 'phosphor-svelte/lib/ArrowDown';
+
+	import info from '$lib/info';
 </script>
 
 <main class="relative h-full">
@@ -52,7 +53,7 @@
 			<h1
 				class="text-shadow-glow-white text-[10rem] leading-32 font-black tracking-tighter text-white"
 			>
-				1,000+
+				{info.home.statistics.members}
 			</h1>
 			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-700 italic">
 				members.
@@ -71,7 +72,7 @@
 		<h1
 			class="text-shadow-glow-white text-[10rem] leading-32 font-black tracking-tighter text-white"
 		>
-			$250,000+
+			{info.home.statistics.raised}
 		</h1>
 		<div class="flex gap-8">
 			<h2
@@ -83,8 +84,8 @@
 			<p class="w-[500px] text-gray-400">
 				<span class="text-white"
 					>We've <span class="bg-indigo-700 font-serif text-white italic">raised</span>
-					over $250,000 through investors and partnerships, demonstrating the strength and trust of our
-					growing network.</span
+					{info.home.statistics.raised} through investors and partnerships, demonstrating the strength
+					and trust of our growing network.</span
 				> This level of backing and funding reflects the confidence our partners have in our mission
 				and the value we deliver. It shows that our community believes in what we're building and the
 				impact we have on bright minds of the future.
@@ -93,7 +94,9 @@
 	</div>
 	<div class="flex flex-col items-center gap-4">
 		<div class="flex gap-4">
-			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">120,000</h1>
+			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
+				{info.home.statistics.impacted_students}
+			</h1>
 			<h2
 				class="font-serif text-7xl leading-16 font-medium tracking-tighter text-indigo-700 italic"
 			>
@@ -121,7 +124,9 @@
 			skills and insights that prepare them for careers in various industries.
 		</p>
 		<div>
-			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">25+</h1>
+			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
+				{info.home.statistics.internships}
+			</h1>
 			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-700 italic">
 				internships.
 			</h2>
@@ -129,7 +134,9 @@
 	</div>
 	<div class="flex flex-col">
 		<div class="flex items-center gap-8">
-			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">50+</h1>
+			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
+				{info.home.statistics.businesses_worked_with}
+			</h1>
 			<p class="w-[500px] text-gray-400">
 				<span class="text-white"
 					>We are committed to <span class="bg-indigo-700 font-serif text-white italic"
@@ -146,8 +153,15 @@
 		</h2>
 	</div>
 </section>
-<section class="flex items-center justify-center">
-	<div>
-		<h1>“To unite <span></span>today's youth with tomorrow's social entrepreneurs”</h1>
+<section class="my-80 flex items-center justify-center">
+	<div class="flex flex-col items-center gap-10">
+		<h1
+			class="w-[650px] text-center font-serif text-6xl font-medium tracking-tighter text-white italic"
+		>
+			“To unite <span class="font-sans font-semibold text-indigo-700">today's</span> youth with
+			<span class="font-sans font-semibold text-indigo-700">tomorrow's</span>
+			social entrepreneurs”
+		</h1>
+		<Button variant="secondary" href="/about">Learn about us</Button>
 	</div>
 </section>

@@ -5,7 +5,6 @@
 	import X from 'phosphor-svelte/lib/X';
 
 	let isMenuOpen = $state(false);
-	$inspect(isMenuOpen);
 </script>
 
 <header class="flex w-full justify-center">
@@ -51,10 +50,11 @@
 					<X size={24} />
 				{/if}</Button
 			>
+			<!-- mobile nav -->
 			<div
 				class={cn(
-					'shadow-glow-blue/5 absolute top-[70px] right-6 flex items-center rounded-2xl border-2 border-white/5 bg-indigo-400/5 p-8 text-white backdrop-blur-xl transition-opacity xl:hidden',
-					`${isMenuOpen ? 'opacity-100' : 'opacity-0'}`
+					'shadow-glow-blue/5 absolute top-[70px] right-6  flex items-center rounded-2xl border-2 border-white/5 bg-indigo-400/50 p-8 text-white backdrop-blur-xl transition-opacity xl:hidden',
+					`${isMenuOpen ? 'block' : 'hidden'}`
 				)}
 			>
 				<div class="flex w-full flex-col gap-4 text-center text-gray-400">

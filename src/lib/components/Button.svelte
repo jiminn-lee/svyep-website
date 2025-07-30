@@ -4,7 +4,7 @@
 	import { tv, type VariantProps } from 'tailwind-variants';
 
 	const buttonVariants = tv({
-		base: 'font-medium border-2 rounded-xl cursor-pointer',
+		base: 'font-medium border-2 rounded-xl cursor-pointer w-fit',
 		variants: {
 			variant: {
 				default:
@@ -25,14 +25,15 @@
 			size: 'default'
 		}
 	});
+
 	type ButtonVariant = VariantProps<typeof buttonVariants>['variant'];
 	type ButtonSize = VariantProps<typeof buttonVariants>['size'];
-
 	type ButtonProps = WithElementRef<HTMLButtonAttributes> &
 		WithElementRef<HTMLAnchorAttributes> & {
 			variant?: ButtonVariant;
 			size?: ButtonSize;
 		};
+
 	let {
 		class: className,
 		variant = 'default',
