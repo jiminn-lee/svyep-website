@@ -1,44 +1,34 @@
 <script lang="ts">
-	import Button from '$lib/components/Button.svelte';
-	import Spotlight from '$lib/components/Spotlight.svelte';
 	import { DotLottieSvelte } from '@lottiefiles/dotlottie-svelte';
-
+	import Spotlight from '$lib/components/Spotlight.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import info from '$lib/info';
 </script>
 
+<svelte:head>
+	<title>Home • SVYEP</title>
+</svelte:head>
+
 <main class="relative h-full">
 	<Spotlight />
-	<!-- <div class="flex h-screen items-center justify-center">
-			<div class="aspect-square w-[1000px]">
-				<DotLottieSvelte src="/animation-white.json" autoplay />
-			</div>
-			<div class="flex w-fit flex-col items-center justify-between gap-8">
-				<h1
-					class="text-shadow-glow-white text-right text-8xl font-medium tracking-tighter text-white"
-				>
-					Empowering <br /> the
-					<span class="text-shadow-glow-blue font-serif text-indigo-700 italic">future</span>
-					of entrepreneurs.
-				</h1>
-				<BlueButton href="/join">Join Us</BlueButton>
-			</div>
-		</div> -->
-	<div class=" flex flex-col items-center justify-between">
-		<img
-			src="/svyep.png"
-			alt=""
-			class="pointer-events-none absolute mt-36 ml-20 size-[600px] object-cover opacity-[0.04]"
-		/>
-		<div class=" my-[350px] flex w-fit flex-col items-center justify-between gap-8">
-			<h1 class="text-shadow-glow-white text-center text-8xl tracking-tighter text-white">
-				Empowering the <span class="text-shadow-glow-blue font-serif text-indigo-700 italic"
-					>future</span
-				> <br /> of entrepreneurs.
+	<div class="my-[220px] flex items-center justify-center">
+		<div class="h-[550px] w-[700px]">
+			<DotLottieSvelte src="/animation.lottie" autoplay segment={[0, 209]} />
+		</div>
+		<div class="mt-15 mr-36 -ml-16 flex w-fit flex-col items-center justify-center gap-12">
+			<h1
+				class="text-shadow-glow-white text-right text-7xl leading-[4.5rem] tracking-tighter text-white"
+			>
+				Empowering <br /> the
+				<span class="text-shadow-glow-blue font-serif text-indigo-700 italic">future</span>
+				of <br /> entrepreneurs.
 			</h1>
-			<Button href="/join" size="lg">Get started</Button>
+			<Button href="/join" size="lg" class="">Get started</Button>
 		</div>
 	</div>
 </main>
+
+<!-- section-1 -->
 <section class="relative flex h-full flex-col items-center gap-52">
 	<div
 		class="absolute top-0 -left-[500px] h-full w-[800px] rounded-full bg-radial from-indigo-950/40
@@ -153,15 +143,54 @@
 		</h2>
 	</div>
 </section>
-<section class="my-80 flex items-center justify-center">
-	<div class="flex flex-col items-center gap-10">
+
+<!-- section-2 -->
+<section class="relative flex items-center justify-center py-[500px]">
+	<div class="relative flex flex-col items-center gap-10">
+		<div
+			class="absolute -top-48 size-[600px] rounded-full bg-radial from-indigo-950/40
+		to-transparent to-75% blur-3xl"
+		></div>
 		<h1
-			class="w-[650px] text-center font-serif text-6xl font-medium tracking-tighter text-white italic"
+			class="text-shadow-glow-white z-10 w-[600px] text-center font-serif text-6xl tracking-tighter text-white italic"
 		>
-			“To unite <span class="font-sans font-semibold text-indigo-700">today's</span> youth with
-			<span class="font-sans font-semibold text-indigo-700">tomorrow's</span>
+			“To unite <span class="text-shadow-glow-blue font-sans font-medium text-indigo-700"
+				>today's</span
+			>
+			youth with
+			<span class="text-shadow-glow-blue font-sans font-medium text-indigo-700">tomorrow's</span>
 			social entrepreneurs”
 		</h1>
-		<Button variant="secondary" href="/about">Learn about us</Button>
+		<Button variant="secondary" href="/about" class="z-10">Learn about us</Button>
+		<div>
+			<img
+				src="/images/home/S201.webp"
+				alt=""
+				class="shadow-glow-gray hover:shadow-glow-blue absolute -top-[200px] -left-[250px] w-[250px] -rotate-12 rounded-3xl opacity-30 transition-all duration-500 hover:opacity-100"
+			/>
+			<img
+				src="/images/home/S202.webp"
+				alt=""
+				class="shadow-glow-gray hover:shadow-glow-blue absolute -top-[250px] left-[120px] w-[400px] rounded-3xl opacity-30 transition-all duration-500 hover:opacity-100"
+			/>
+			<img
+				src="/images/home/S203.webp"
+				alt=""
+				class="shadow-glow-gray hover:shadow-glow-blue absolute -top-[150px] left-[650px] w-[200px] rotate-12 rounded-3xl opacity-30 transition-all duration-500 hover:opacity-100"
+			/>
+			<img
+				src="/images/home/S204.webp"
+				alt=""
+				class="shadow-glow-gray hover:shadow-glow-blue absolute top-[300px] left-[280px] w-[500px] -rotate-12 rounded-3xl opacity-30 transition-all duration-500 hover:opacity-100"
+			/>
+			<img
+				src="/images/home/S205.webp"
+				alt=""
+				class="shadow-glow-gray hover:shadow-glow-blue absolute top-[200px] -left-[100px] w-[220px] rotate-6 rounded-3xl opacity-30 transition-all duration-500 hover:opacity-100"
+			/>
+		</div>
 	</div>
 </section>
+
+<!-- section-3 -->
+<section></section>

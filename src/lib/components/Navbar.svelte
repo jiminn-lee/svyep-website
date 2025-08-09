@@ -13,7 +13,7 @@
 	>
 		<div class="flex w-fit justify-start">
 			<a class="flex w-fit items-center gap-2 xl:w-[250px]" href="/">
-				<img src="/svyep.png" alt="" class="mb-1 size-12" />
+				<img src="/logo.png" alt="" class="mb-1 size-12" />
 				<div class="hidden sm:block">
 					<h1 class="font-display mt-0.5 text-3xl leading-6 tracking-tight">SVYEP</h1>
 					<p class=" text-[0.5rem] leading-tight font-extralight text-gray-300">
@@ -50,7 +50,6 @@
 					<X size={24} />
 				{/if}</Button
 			>
-			<!-- mobile nav -->
 			<div
 				class={cn(
 					'shadow-glow-blue/5 absolute top-[70px] right-6  flex items-center rounded-2xl border-2 border-white/5 bg-indigo-400/50 p-8 text-white backdrop-blur-xl transition-opacity xl:hidden',
