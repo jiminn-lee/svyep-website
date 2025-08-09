@@ -3,6 +3,7 @@
 	import Spotlight from '$lib/components/Spotlight.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import info from '$lib/info';
+	import CaretDown from 'phosphor-svelte/lib/CaretDown';
 </script>
 
 <svelte:head>
@@ -20,10 +21,10 @@
 				class="text-shadow-glow-white text-right text-7xl leading-[4.5rem] tracking-tighter text-white"
 			>
 				Empowering <br /> the
-				<span class="text-shadow-glow-blue font-serif text-indigo-700 italic">future</span>
+				<span class="text-shadow-glow-blue font-serif text-indigo-600 italic">future</span>
 				of <br /> entrepreneurs.
 			</h1>
-			<Button href="/join" size="lg" class="">Get started</Button>
+			<Button href="/join" size="lg">Get started</Button>
 		</div>
 	</div>
 </main>
@@ -45,7 +46,7 @@
 			>
 				{info.home.statistics.members}
 			</h1>
-			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-700 italic">
+			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-600 italic">
 				members.
 			</h2>
 		</div>
@@ -66,7 +67,7 @@
 		</h1>
 		<div class="flex gap-8">
 			<h2
-				class="font-serif text-7xl font-medium tracking-tighter text-indigo-700 italic
+				class="font-serif text-7xl font-medium tracking-tighter text-indigo-600 italic
 			"
 			>
 				raised.
@@ -88,7 +89,7 @@
 				{info.home.statistics.impacted_students}
 			</h1>
 			<h2
-				class="font-serif text-7xl leading-16 font-medium tracking-tighter text-indigo-700 italic"
+				class="font-serif text-7xl leading-16 font-medium tracking-tighter text-indigo-600 italic"
 			>
 				impacted <br />students.
 			</h2>
@@ -117,7 +118,7 @@
 			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
 				{info.home.statistics.internships}
 			</h1>
-			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-700 italic">
+			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-600 italic">
 				internships.
 			</h2>
 		</div>
@@ -138,7 +139,7 @@
 				grow alongside.
 			</p>
 		</div>
-		<h2 class="font-serif text-7xl font-semibold tracking-tighter text-indigo-700 italic">
+		<h2 class="font-serif text-7xl font-semibold tracking-tighter text-indigo-600 italic">
 			businesses worked with.
 		</h2>
 	</div>
@@ -154,11 +155,11 @@
 		<h1
 			class="text-shadow-glow-white z-10 w-[600px] text-center font-serif text-6xl tracking-tighter text-white italic"
 		>
-			“To unite <span class="text-shadow-glow-blue font-sans font-medium text-indigo-700"
+			“To unite <span class="text-shadow-glow-blue font-sans font-medium text-indigo-600"
 				>today's</span
 			>
 			youth with
-			<span class="text-shadow-glow-blue font-sans font-medium text-indigo-700">tomorrow's</span>
+			<span class="text-shadow-glow-blue font-sans font-medium text-indigo-600">tomorrow's</span>
 			social entrepreneurs”
 		</h1>
 		<Button variant="secondary" href="/about" class="z-10">Learn about us</Button>
@@ -193,4 +194,66 @@
 </section>
 
 <!-- section-3 -->
-<section></section>
+<section class="flex flex-col items-center gap-28">
+	<h1 class="text-center text-9xl leading-24 tracking-tighter text-white">
+		We offer resources for <br />
+		<span
+			class="font-serif italic underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8 text-shadow-none"
+			>your</span
+		> success.
+	</h1>
+	<div class="flex flex-col">
+		<div class="z-10 flex">
+			<h1 class="font-sans text-[11rem] font-bold tracking-tighter text-white text-shadow-lg">
+				01
+			</h1>
+			<h2 class=" mt-16 ml-4 font-serif text-6xl font-semibold text-indigo-600">CONNECTIONS</h2>
+		</div>
+		<div class="-mt-32 flex items-center">
+			<img src="/images/home/S301.webp" alt="" class="ml-1 h-auto w-[300px] rounded-3xl" />
+			<ul class="ml-16 w-[400px] list-disc text-3xl leading-relaxed text-gray-400">
+				<li>In-person speaker events</li>
+				<li>Networking sessions</li>
+				<li>Online meetings w/ industry professionals</li>
+			</ul>
+		</div>
+	</div>
+	<CaretDown size={80} class="text-gray-400" />
+	<div class="flex flex-col items-end">
+		<div class="z-10 flex">
+			<h2 class=" mt-16 mr-4 font-serif text-6xl font-semibold text-indigo-600">EXPERIENCE</h2>
+			<h1 class="font-sans text-[11rem] font-bold tracking-tighter text-white text-shadow-lg">
+				02
+			</h1>
+		</div>
+		<div class="-mt-32 flex items-center">
+			<ul class="ml-16 w-[400px] list-disc text-3xl leading-relaxed text-gray-400">
+				<li>Paid internships & jobs</li>
+				<li>Volunteer opportunities @ local startups in the Silicon Valley</li>
+			</ul>
+			<img src="/images/home/S302.webp" alt="" class="mr-1 h-auto w-[300px] rounded-3xl" />
+		</div>
+	</div>
+	<CaretDown size={80} class="text-gray-400" />
+	<div class="flex flex-col items-center">
+		<h2 class="font-serif text-6xl font-semibold text-indigo-600">EDUCATION</h2>
+		<h1
+			class="z-10 -mt-14 font-sans text-[11rem] font-bold tracking-tighter text-white text-shadow-lg"
+		>
+			03
+		</h1>
+		<img src="/images/home/S303.webp" alt="" class=" -mt-32 h-auto w-[500px] rounded-3xl" />
+		<ul class="mt-10 w-[500px] list-disc text-3xl leading-relaxed text-gray-400">
+			<li>Engage with mentions & peers in student-led workshops</li>
+			<li>Access our nationwide network of schools</li>
+		</ul>
+	</div>
+</section>
+
+<!-- section-4 -->
+<section class="my-56 flex flex-col items-center gap-12">
+	<h1 class="text-center text-9xl leading-24 tracking-tighter text-white">
+		Get started <span class="font-bold text-indigo-600">TODAY.</span>
+	</h1>
+	<Button href="/join" size="lg">Join Us</Button>
+</section>
