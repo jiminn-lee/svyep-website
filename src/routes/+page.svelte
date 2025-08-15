@@ -12,7 +12,7 @@
 
 <main class="relative h-full">
 	<Spotlight />
-	<div class="my-[220px] flex items-center justify-center">
+	<div class="my-[220px] flex flex-wrap items-center justify-center">
 		<div class="h-[550px] w-[700px]">
 			<DotLottieSvelte src="/animation.lottie" autoplay segment={[0, 209]} />
 		</div>
@@ -194,8 +194,8 @@
 </section>
 
 <!-- section-3 -->
-<section class="flex flex-col items-center gap-28">
-	<h1 class="text-center text-9xl leading-24 tracking-tighter text-white">
+<section class="flex flex-col items-center gap-20">
+	<h1 class="mb-20 text-center text-9xl leading-24 tracking-tighter text-white">
 		We offer resources for <br />
 		<span
 			class="font-serif italic underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8 text-shadow-none"
