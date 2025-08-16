@@ -29,6 +29,7 @@
 	"dependencies": {
 		"@lottiefiles/dotlottie-svelte": "^0.6.4",
 		"clsx": "^2.1.1",
+		"globe.gl": "^2.43.0",
 		"motion": "^12.23.6",
 		"phosphor-svelte": "^3.0.1",
 		"prettier-plugin-tailwindcss": "^0.6.14",
