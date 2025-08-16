@@ -4,6 +4,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import info from '$lib/info';
 	import CaretDown from 'phosphor-svelte/lib/CaretDown';
+	import StarsBackground from '$lib/components/StarsBackground.svelte';
 </script>
 
 <svelte:head>
@@ -31,12 +32,13 @@
 
 <!-- section-1 -->
 <section class="relative flex h-full flex-col items-center gap-52">
+	<StarsBackground starDensity={0.00008} />
 	<div
-		class="absolute top-0 -left-[500px] h-full w-[800px] rounded-full bg-radial from-indigo-950/40
+		class="absolute top-0 -left-[500px] h-full w-[800px] rounded-full bg-radial from-indigo-950/80
 		to-transparent to-75% blur-3xl"
 	></div>
 	<div
-		class="absolute -right-[500px] h-full w-[800px] rounded-full bg-radial from-indigo-950/40
+		class="absolute -right-[500px] h-full w-[800px] rounded-full bg-radial from-indigo-950/80
 		to-transparent to-75% blur-3xl"
 	></div>
 	<div class=" flex items-center gap-8">
@@ -147,9 +149,10 @@
 
 <!-- section-2 -->
 <section class="relative flex items-center justify-center py-[500px]">
+	<StarsBackground starDensity={0.00008} />
 	<div class="relative flex flex-col items-center gap-10">
 		<div
-			class="absolute -top-48 size-[600px] rounded-full bg-radial from-indigo-950/40
+			class="absolute -top-48 size-[600px] rounded-full bg-radial from-indigo-950/80
 		to-transparent to-75% blur-3xl"
 		></div>
 		<h1
@@ -194,7 +197,8 @@
 </section>
 
 <!-- section-3 -->
-<section class="flex flex-col items-center gap-20">
+<section class="relative flex flex-col items-center gap-20">
+	<StarsBackground starDensity={0.00008} />
 	<h1 class="mb-20 text-center text-9xl leading-24 tracking-tighter text-white">
 		We offer resources for <br />
 		<span
@@ -211,7 +215,7 @@
 		</div>
 		<div class="-mt-32 flex items-center">
 			<img src="/images/home/S301.webp" alt="" class="ml-1 h-auto w-[300px] rounded-3xl" />
-			<ul class="ml-16 w-[400px] list-disc text-3xl leading-relaxed text-gray-400">
+			<ul class="ml-16 w-[500px] list-disc text-3xl leading-relaxed text-gray-400">
 				<li>In-person speaker events</li>
 				<li>Networking sessions</li>
 				<li>Online meetings w/ industry professionals</li>
@@ -227,7 +231,7 @@
 			</h1>
 		</div>
 		<div class="-mt-32 flex items-center">
-			<ul class="ml-16 w-[400px] list-disc text-3xl leading-relaxed text-gray-400">
+			<ul class="w-[500px] list-disc text-3xl leading-relaxed text-gray-400">
 				<li>Paid internships & jobs</li>
 				<li>Volunteer opportunities @ local startups in the Silicon Valley</li>
 			</ul>
@@ -251,7 +255,8 @@
 </section>
 
 <!-- section-4 -->
-<section class="my-56 flex flex-col items-center gap-12">
+<section class="relative my-56 flex flex-col items-center gap-12">
+	<StarsBackground starDensity={0.00008} />
 	<h1 class="text-center text-9xl leading-24 tracking-tighter text-white">
 		Get started <span class="font-bold text-indigo-600">TODAY.</span>
 	</h1>
