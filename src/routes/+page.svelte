@@ -11,6 +11,7 @@
 	<title>Home • SVYEP</title>
 </svelte:head>
 
+<StarsBackground starDensity={0.00003} />
 <main class="relative h-full">
 	<Spotlight />
 	<div class="my-[220px] flex flex-wrap items-center justify-center">
@@ -34,14 +35,14 @@
 <section class="relative flex h-full flex-col items-center gap-52">
 	<StarsBackground starDensity={0.00008} />
 	<div
-		class="absolute top-0 -left-[500px] h-full w-[800px] rounded-full bg-radial from-indigo-950/80
-		to-transparent to-75% blur-3xl"
+		class="absolute top-0 -left-[500px] -z-10 h-full w-[800px] rounded-full bg-radial from-[#18153b]
+		to-zinc-950 to-75% blur-3xl"
 	></div>
 	<div
-		class="absolute -right-[500px] h-full w-[800px] rounded-full bg-radial from-indigo-950/80
-		to-transparent to-75% blur-3xl"
+		class="absolute -right-[500px] -z-10 h-full w-[800px] rounded-full bg-radial from-[#18153b]
+		to-zinc-950 to-75% blur-3xl"
 	></div>
-	<div class=" flex items-center gap-8">
+	<div class="flex items-center gap-8">
 		<div class="text-right">
 			<h1
 				class="text-shadow-glow-white text-[10rem] leading-32 font-black tracking-tighter text-white"
@@ -152,8 +153,8 @@
 	<StarsBackground starDensity={0.00008} />
 	<div class="relative flex flex-col items-center gap-10">
 		<div
-			class="absolute -top-48 size-[600px] rounded-full bg-radial from-indigo-950/80
-		to-transparent to-75% blur-3xl"
+			class="absolute -top-48 size-[600px] rounded-full bg-radial from-[#18153b]
+		to-zinc-950 to-75% blur-3xl"
 		></div>
 		<h1
 			class="text-shadow-glow-white z-10 w-[600px] text-center font-serif text-6xl tracking-tighter text-white italic"
@@ -218,7 +219,7 @@
 			<ul class="ml-16 w-[500px] list-disc text-3xl leading-relaxed text-gray-400">
 				<li>In-person speaker events</li>
 				<li>Networking sessions</li>
-				<li>Online meetings w/ industry professionals</li>
+				<li>Zoom webinars and workshops</li>
 			</ul>
 		</div>
 	</div>
@@ -231,9 +232,10 @@
 			</h1>
 		</div>
 		<div class="-mt-32 flex items-center">
-			<ul class="w-[500px] list-disc text-3xl leading-relaxed text-gray-400">
+			<ul class="mr-10 w-[500px] list-disc text-3xl leading-relaxed text-gray-400">
 				<li>Paid internships & jobs</li>
 				<li>Volunteer opportunities @ local startups in the Silicon Valley</li>
+				<li>Work alongside industry professionals</li>
 			</ul>
 			<img src="/images/home/S302.webp" alt="" class="mr-1 h-auto w-[300px] rounded-3xl" />
 		</div>
@@ -256,7 +258,6 @@
 
 <!-- section-4 -->
 <section class="relative my-56 flex flex-col items-center gap-12">
-	<StarsBackground starDensity={0.00008} />
 	<h1 class="text-center text-9xl leading-24 tracking-tighter text-white">
 		Get started <span class="font-bold text-indigo-600">TODAY.</span>
 	</h1>
