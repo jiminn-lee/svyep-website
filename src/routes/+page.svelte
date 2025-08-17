@@ -2,7 +2,7 @@
 	import { DotLottieSvelte } from '@lottiefiles/dotlottie-svelte';
 	import Spotlight from '$lib/components/Spotlight.svelte';
 	import Button from '$lib/components/Button.svelte';
-	import info from '$lib/info';
+	import home from '$lib/data/home';
 	import CaretDown from 'phosphor-svelte/lib/CaretDown';
 	import StarsBackground from '$lib/components/StarsBackground.svelte';
 </script>
@@ -47,7 +47,7 @@
 			<h1
 				class="text-shadow-glow-white text-[10rem] leading-32 font-black tracking-tighter text-white"
 			>
-				{info.home.statistics.members}
+				{home.statistics.members}
 			</h1>
 			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-600 italic">
 				members.
@@ -66,7 +66,7 @@
 		<h1
 			class="text-shadow-glow-white text-[10rem] leading-32 font-black tracking-tighter text-white"
 		>
-			{info.home.statistics.raised}
+			{home.statistics.raised}
 		</h1>
 		<div class="flex gap-8">
 			<h2
@@ -78,8 +78,8 @@
 			<p class="w-[500px] text-gray-400">
 				<span class="text-white"
 					>We've <span class="bg-indigo-700 font-serif text-white italic">raised</span>
-					{info.home.statistics.raised} through investors and partnerships, demonstrating the strength
-					and trust of our growing network.</span
+					{home.statistics.raised} through investors and partnerships, demonstrating the strength and
+					trust of our growing network.</span
 				> This level of backing and funding reflects the confidence our partners have in our mission
 				and the value we deliver. It shows that our community believes in what we're building and the
 				impact we have on bright minds of the future.
@@ -89,7 +89,7 @@
 	<div class="flex flex-col items-center gap-4">
 		<div class="flex gap-4">
 			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
-				{info.home.statistics.impacted_students}
+				{home.statistics.impacted_students}
 			</h1>
 			<h2
 				class="font-serif text-7xl leading-16 font-medium tracking-tighter text-indigo-600 italic"
@@ -119,7 +119,7 @@
 		</p>
 		<div>
 			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
-				{info.home.statistics.internships}
+				{home.statistics.internships}
 			</h1>
 			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-600 italic">
 				internships.
@@ -129,7 +129,7 @@
 	<div class="flex flex-col">
 		<div class="flex items-center gap-8">
 			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
-				{info.home.statistics.businesses_worked_with}
+				{home.statistics.businesses_worked_with}
 			</h1>
 			<p class="w-[500px] text-gray-400">
 				<span class="text-white"
