@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 @theme {
 	--font-sans: 'Urbanist', 'sans-serif';
 	--font-serif: 'Baskervville', 'sans-serif';
 	--font-display: 'GFS Didot', 'sans-serif';
+	--font-articles: 'UnifrakturMaguntia', 'sans-serrif';
 	--text-shadow-glow-white: rgba(255, 255, 255, 0.5) 0px 0px 4px;
 	--text-shadow-glow-blue: rgba(4, 51, 140, 1) 0px 0px 4px;
 	--shadow-glow-blue:

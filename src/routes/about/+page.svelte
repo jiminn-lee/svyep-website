@@ -9,9 +9,9 @@
 
 <div class="relative flex h-full flex-col items-center gap-20 pt-40">
 	<StarsBackground className="-z-10" starDensity={0.00008} />
-	<div class="flex w-10/12 flex-col bg-zinc-950 text-white">
-		<h1 class="font-serif text-7xl leading-loose tracking-tighter">
-			Our Vision<span class="text-indigo-600">.</span>
+	<div class="flex w-[1200px] flex-col bg-zinc-950 text-white">
+		<h1 class="text-shadow-glow-white font-serif text-7xl leading-loose tracking-tighter">
+			Our Vision<span class="text-indigo-600 text-shadow-none">.</span>
 		</h1>
 		<p class=" text-justify text-5xl font-extralight tracking-tight">
 			At SVYEP, we <span class="font-serif font-medium text-indigo-600 italic">empower</span> high
@@ -28,9 +28,9 @@
 			<span class="font-serif font-medium text-indigo-600 italic">journey</span>.
 		</p>
 	</div>
-	<div class=" flex h-full w-10/12 flex-col items-center text-white">
-		<h1 class="font-serif text-9xl leading-loose tracking-tighter">
-			Meet the Team<span class="text-indigo-600">.</span>
+	<div class=" flex h-full flex-col items-center text-white">
+		<h1 class="text-shadow-glow-white font-serif text-9xl leading-loose tracking-tighter">
+			Meet the Team<span class="text-indigo-600 text-shadow-none">.</span>
 		</h1>
 		<div class="grid max-w-[1200px] grid-cols-3 gap-12">
 			{#each about.team as member}

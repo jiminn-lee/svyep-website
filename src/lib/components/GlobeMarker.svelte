@@ -1,15 +1,15 @@
 <script>
-	import Circle from 'phosphor-svelte/lib/Circle';
+	import StarFour from 'phosphor-svelte/lib/StarFour';
 
 	let { location, number_of_schools } = $props();
 </script>
 
 <div class="pointer-events-auto flex cursor-pointer flex-col items-center">
-	<Circle
+	<StarFour
 		weight="fill"
-		size={Math.min(5 + Math.log1p(number_of_schools) * 10, 40)}
-		class="peer z-0 text-indigo-200 blur-xs
-		  drop-shadow-orange-100 transition hover:text-indigo-600 hover:blur-none hover:drop-shadow-none"
+		size={Math.min(8 + Math.log1p(number_of_schools) * 10, 50)}
+		class="peer z-0 text-indigo-200 
+		   drop-shadow-2xl drop-shadow-indigo-600 transition hover:text-indigo-600"
 	/>
 	<div
 		class="invisible absolute -top-12 z-50 flex flex-col items-center text-center text-nowrap text-white peer-hover:visible"
