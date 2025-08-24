@@ -257,7 +257,7 @@
 </section>
 
 <!-- section-4 -->
-<section class="relative my-56 flex flex-col items-center gap-12">
+<section class="relative my-32 flex flex-col items-center gap-12">
 	<h1 class="text-center text-9xl leading-24 tracking-tighter text-white">
 		Get started <span class="font-bold text-indigo-600">TODAY.</span>
 	</h1>
