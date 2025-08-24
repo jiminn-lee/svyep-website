@@ -1,6 +1,6 @@
 <script lang="ts">
 	import StarsBackground from '$lib/components/StarsBackground.svelte';
-	import type { PageData } from './$types';
+	import ArrowLeft from 'phosphor-svelte/lib/ArrowLeft';
 
 	let { data } = $props();
 	const { metadata, article: Article } = data;
@@ -10,7 +10,12 @@
 <article
 	class="prose prose-xl prose-h1:font-serif prose-zinc dark:prose-invert mr-auto mb-32 ml-auto min-h-screen max-w-[900px] px-8 pt-40"
 >
-	<div class="flex justify-between font-serif text-2xl leading-loose font-semibold text-indigo-600">
+	<a
+		href="/articles"
+		class="mb-10 flex items-center gap-2 text-gray-400 no-underline hover:underline"
+		><ArrowLeft size={20} weight="bold" />Back</a
+	>
+	<div class="flex font-serif text-2xl font-semibold text-indigo-600">
 		{metadata.type}
 	</div>
 	<h1>

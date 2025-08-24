@@ -8,8 +8,7 @@
 	<StarFour
 		weight="fill"
 		size={Math.min(8 + Math.log1p(number_of_schools) * 10, 50)}
-		class="peer z-0 text-indigo-200 
-		   drop-shadow-2xl drop-shadow-indigo-600 transition hover:text-indigo-600"
+		class="peer z-0 text-indigo-200 drop-shadow-2xl drop-shadow-indigo-600 transition hover:text-indigo-600"
 	/>
 	<div
 		class="invisible absolute -top-12 z-50 flex flex-col items-center text-center text-nowrap text-white peer-hover:visible"
