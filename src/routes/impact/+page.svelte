@@ -29,7 +29,7 @@
 			})
 			.backgroundColor('#00000000')
 			.atmosphereColor('#4338ca');
-		globe.controls().enableZoom = false;
+		// globe.controls().enableZoom = false;
 	});
 </script>
 
@@ -44,3 +44,8 @@
 	</h1>
 	<div bind:this={globeElement}></div>
 </div>
+
+<!-- click marker, list of schools pop up on the left -->
+<!-- instructions -->
+
+<!-- events, parrtner, join, donate -->

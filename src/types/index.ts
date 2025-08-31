@@ -7,7 +7,8 @@ export type MarkdownPost = {
 		author: string;
 		date: string;
 		type: string;
-		imgUrls: string[];
+		images: string[];
+		wordcount: number;
 	};
 	default: Component;
 	slug: string;

@@ -3,8 +3,8 @@
 	import InstagramLogo from 'phosphor-svelte/lib/InstagramLogo';
 </script>
 
-<footer class="flex flex-col gap-4 bg-linear-to-t from-[#120f35] to-zinc-950 pt-14">
-	<div class="flex flex-col items-center justify-evenly gap-y-8 md:flex-row">
+<footer class="flex flex-col items-center gap-10 bg-linear-to-t from-[#120f35] to-zinc-950 pt-14">
+	<div class="flex w-full flex-col items-center justify-evenly gap-y-8 md:flex-row">
 		<div class="flex w-[300px] justify-center gap-4 text-gray-400">
 			<a
 				href="mailto:svyep.official@gmail.com"
@@ -57,11 +57,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="m-2 flex flex-wrap justify-between text-xs text-gray-400">
+	<div class="m-2 flex flex-col text-center text-xs text-gray-500">
 		<p>© 2025 by the Silicon Valley Youth Entrepreneur Program</p>
 		<p>
 			Designed & Developed by <a
-				class="text-indigo-600 hover:underline"
+				class="text-white hover:underline"
 				href="https://github.com/jiminn-lee"
 				target="_blank">Jimin Lee</a
 			>

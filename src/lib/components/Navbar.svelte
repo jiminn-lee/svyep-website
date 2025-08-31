@@ -31,7 +31,7 @@
 			>
 			<a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white">Merch</a>
 
-			<a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white">Donate</a>
+			<!-- <a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white">Donate</a> -->
 		</div>
 		<div class=" flex w-fit justify-end gap-2 xl:w-[250px]">
 			<Button variant="secondary" href="/partner" class="hidden sm:block">Partner With Us</Button>
@@ -72,10 +72,9 @@
 					<a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white"
 						>Merch</a
 					>
-
-					<a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white"
+					<!-- <a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white"
 						>Donate</a
-					>
+					> -->
 				</div>
 			</div>
 		</div>

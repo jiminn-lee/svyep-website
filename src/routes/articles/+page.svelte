@@ -7,9 +7,13 @@
 </script>
 
 <StarsBackground starDensity={0.00003} className="-z-10" />
-<div class="mr-auto ml-auto flex min-h-screen flex-col items-center pt-40 text-white">
+<div class="mr-auto ml-auto flex min-h-screen flex-col items-center pt-30 text-white sm:pt-40">
 	<div class="flex flex-col items-center gap-4">
-		<h1 class="font-articles text-shadow-glow-white text-center text-8xl">The SVYEP Chronicle</h1>
+		<h1
+			class="font-articles text-shadow-glow-white w-full text-center text-4xl text-wrap sm:text-6xl lg:text-8xl"
+		>
+			The SVYEP Chronicle
+		</h1>
 		<div class="flex gap-8 text-gray-400 select-none">
 			<button
 				class={cn(
@@ -50,7 +54,10 @@
 		{#each data.articles as article, index}
 			{#if selectedTab === 'All' || article.metadata.type === selectedTab}
 				<div
-					class={cn('flex items-center gap-10', index % 2 === 0 ? 'flex-row' : 'flex-row-reverse')}
+					class={cn(
+						'flex flex-wrap items-center justify-center gap-10 md:flex-nowrap',
+						index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+					)}
 				>
 					<a
 						href={`/articles/${article.slug}`}
@@ -64,19 +71,24 @@
 						</h1>
 						<div class="mt-1 flex justify-between font-sans text-lg font-normal text-gray-400">
 							<p>By {article.metadata.author}</p>
-							<p>
+							<h3 class=" text-gray-400">
+								{article.metadata.wordcount / 255 >= 1
+									? `${Math.round(article.metadata.wordcount / 255)} minute read`
+									: `${Math.round((article.metadata.wordcount / 255) * 60)} second read`}
+							</h3>
+							<!-- <p>
 								{new Date('2024-02-14').toLocaleDateString('en-us', {
 									year: 'numeric',
 									month: 'long',
 									day: 'numeric'
 								})}
-							</p>
+							</p> -->
 						</div>
 						<h2 class="mt-2">{article.metadata.subtitle}</h2>
 					</a>
-					<a href={`/articles/${article.slug}`} class="h-full w-1/2 cursor-pointer">
+					<a href={`/articles/${article.slug}`} class="h-full w-full cursor-pointer sm:w-1/2">
 						<img
-							src={article.metadata.imgUrls[0]}
+							src={article.metadata.images[0]}
 							alt={article.metadata.title}
 							class="hover:shadow-glow-blue-hover rounded-3xl outline-1 outline-indigo-600 transition"
 						/>

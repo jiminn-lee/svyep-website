@@ -8,12 +8,13 @@
 </svelte:head>
 
 <div class="relative flex h-full flex-col items-center gap-20 pt-40">
-	<StarsBackground className="-z-10" starDensity={0.00008} />
-	<div class="flex w-[1200px] flex-col bg-zinc-950 text-white">
+	<StarsBackground className="-z-10 fixed" starDensity={0.00003} />
+	<StarsBackground className="" starDensity={0.00003} />
+	<div class="flex w-full max-w-[1200px] flex-col bg-zinc-950 text-white">
 		<h1 class="text-shadow-glow-white font-serif text-7xl leading-loose tracking-tighter">
 			Our Vision<span class="text-indigo-600 text-shadow-none">.</span>
 		</h1>
-		<p class=" text-justify text-5xl font-extralight tracking-tight">
+		<p class="text-justify text-5xl font-extralight tracking-tight">
 			At SVYEP, we <span class="font-serif font-medium text-indigo-600 italic">empower</span> high
 			school students by providing
 			<span class="font-serif font-medium text-indigo-600 italic">access</span>
@@ -28,13 +29,14 @@
 			<span class="font-serif font-medium text-indigo-600 italic">journey</span>.
 		</p>
 	</div>
+
 	<div class=" flex h-full flex-col items-center text-white">
 		<h1 class="text-shadow-glow-white font-serif text-9xl leading-loose tracking-tighter">
 			Meet the Team<span class="text-indigo-600 text-shadow-none">.</span>
 		</h1>
 		<div class="grid max-w-[1200px] grid-cols-3 gap-12">
 			{#each about.team as member}
-				<div class="flex flex-col items-center bg-zinc-950">
+				<div class="flex flex-col items-center">
 					<div class="mb-4 size-56 rounded-full bg-gray-400"></div>
 					<h1 class="font-serif text-2xl tracking-tighter">{member.name}</h1>
 					<h2 class="font-semibold tracking-tighter text-indigo-600">{member.position}</h2>

@@ -8,7 +8,7 @@
 
 <StarsBackground className="-z-10" starDensity={0.00003} />
 <article
-	class="prose prose-xl prose-h1:font-serif prose-zinc dark:prose-invert mr-auto mb-32 ml-auto min-h-screen max-w-[900px] px-8 pt-40"
+	class="prose prose-lg prose-h1:font-serif prose-zinc dark:prose-invert mr-auto mb-32 ml-auto min-h-screen max-w-[900px] px-8 pt-40"
 >
 	<a
 		href="/articles"

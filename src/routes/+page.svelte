@@ -11,7 +11,7 @@
 	<title>Home • SVYEP</title>
 </svelte:head>
 
-<StarsBackground starDensity={0.00003} />
+<StarsBackground starDensity={0.00003} className="fixed -z-10" />
 <main class="relative h-full">
 	<Spotlight />
 	<div class="my-[220px] flex flex-wrap items-center justify-center">
@@ -33,13 +33,13 @@
 
 <!-- section-1 -->
 <section class="relative flex h-full flex-col items-center gap-52">
-	<StarsBackground starDensity={0.00008} />
+	<StarsBackground starDensity={0.00003} className="-z-10" />
 	<div
-		class="absolute top-0 -left-[500px] -z-10 h-full w-[800px] rounded-full bg-radial from-[#18153b]
+		class="absolute top-0 -left-[500px] -z-20 h-full w-[800px] rounded-full bg-radial from-[#18153b]
 		to-zinc-950 to-75% blur-3xl"
 	></div>
 	<div
-		class="absolute -right-[500px] -z-10 h-full w-[800px] rounded-full bg-radial from-[#18153b]
+		class="absolute -right-[500px] -z-20 h-full w-[800px] rounded-full bg-radial from-[#18153b]
 		to-zinc-950 to-75% blur-3xl"
 	></div>
 	<div class="flex items-center gap-8">
@@ -150,7 +150,7 @@
 
 <!-- section-2 -->
 <section class="relative flex items-center justify-center py-[500px]">
-	<StarsBackground starDensity={0.00008} />
+	<StarsBackground starDensity={0.00003} className="-z-10" />
 	<div class="relative flex flex-col items-center gap-10">
 		<div
 			class="absolute -top-48 size-[600px] rounded-full bg-radial from-[#18153b]
@@ -199,7 +199,7 @@
 
 <!-- section-3 -->
 <section class="relative flex flex-col items-center gap-20">
-	<StarsBackground starDensity={0.00008} />
+	<StarsBackground starDensity={0.00003} className="-z-10" />
 	<h1 class="mb-20 text-center text-9xl leading-24 tracking-tighter text-white">
 		We offer resources for <br />
 		<span
