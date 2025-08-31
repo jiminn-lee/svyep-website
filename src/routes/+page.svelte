@@ -258,8 +258,8 @@
 
 <!-- section-4 -->
 <section class="relative my-32 flex flex-col items-center gap-12">
-	<h1 class="text-center text-9xl leading-24 tracking-tighter text-white">
-		Get started <span class="font-bold text-indigo-600">TODAY.</span>
+	<h1 class="text-shadow-glow-white text-center text-9xl leading-24 tracking-tighter text-white">
+		Get started <span class="text-shadow-glow-blue font-bold text-indigo-600">TODAY.</span>
 	</h1>
 	<Button href="/join" size="lg">Join Us</Button>
 </section>

@@ -6,6 +6,10 @@
 	let selectedTab = $state('All');
 </script>
 
+<svelte:head>
+	<title>Articles • SVYEP</title>
+</svelte:head>
+
 <StarsBackground starDensity={0.00003} className="-z-10" />
 <div class="mr-auto ml-auto flex min-h-screen flex-col items-center pt-30 text-white sm:pt-40">
 	<div class="flex flex-col items-center gap-4">
