@@ -1,6 +1,9 @@
 <script lang="ts">
+	import Button from '$lib/components/Button.svelte';
 	import Marquee from '$lib/components/Marquee.svelte';
 	import StarsBackground from '$lib/components/StarsBackground.svelte';
+	import { ArrowDown, ArrowUp } from 'phosphor-svelte';
+	import { fade } from 'svelte/transition';
 
 	const companiesAndOrganizations = Object.values(
 		import.meta.glob('/src/lib/logos/companies-and-organizations/*.png', {
@@ -15,15 +18,49 @@
 			import: 'default'
 		})
 	);
+
+	let isFormOpen = $state(false);
 </script>
 
-<div class="relative flex flex-col items-center gap-20 pt-40">
+<div class="relative flex flex-col items-center pt-40">
 	<StarsBackground className="-z-10 fixed" starDensity={0.00003} />
 	<StarsBackground starDensity={0.00003} className="-z-10" />
 	<h1 class="text-shadow-glow-white text-center text-8xl tracking-tighter text-white">
 		<span class="text-shadow-glow-blue font-bold text-indigo-600">PARTNER</span> with us.
 	</h1>
-	<div class="flex flex-col items-center gap-4">
+	<Button
+		variant="secondary"
+		class="my-5 flex items-center gap-2"
+		onclick={() => {
+			isFormOpen = !isFormOpen;
+		}}
+	>
+		{#if isFormOpen}
+			<ArrowUp />
+		{:else}
+			<ArrowDown />
+		{/if}
+		Interest Form
+		{#if isFormOpen}
+			<ArrowUp />
+		{:else}
+			<ArrowDown />
+		{/if}
+	</Button>
+	{#if isFormOpen}
+		<iframe
+			in:fade={{ duration: 800 }}
+			class="opacity-90"
+			title="SVYEP Student Enrollment Form"
+			src="https://docs.google.com/forms/d/e/1FAIpQLSdQCc0DtoD2cA7en22z78AKhd9buIx81cVk6AUlDE62KwgN1w/viewform?embedded=true"
+			width="840"
+			height="3600"
+			frameborder="0"
+			marginheight="0"
+			marginwidth="0">Loading...</iframe
+		>
+	{/if}
+	<div class="my-10 flex flex-col items-center gap-4">
 		<h1
 			class="mb-4 font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8"
 		>
@@ -59,7 +96,7 @@
 			</Marquee>
 		</div>
 	</div>
-	<div class="flex flex-col items-center gap-4">
+	<div class="my-10 flex flex-col items-center gap-4">
 		<h1
 			class="mb-4 font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8"
 		>
@@ -74,7 +111,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="flex flex-col items-center gap-4">
+	<div class="my-10 flex flex-col items-center gap-4">
 		<h1
 			class="mb-4 font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8"
 		>
