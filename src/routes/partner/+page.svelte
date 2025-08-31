@@ -8,9 +8,16 @@
 			import: 'default'
 		})
 	);
+
+	const communityInitiatives = Object.values(
+		import.meta.glob('/src/lib/logos/community-initiatives/*.png', {
+			eager: true,
+			import: 'default'
+		})
+	);
 </script>
 
-<div class="flex flex-col items-center gap-20 pt-40">
+<div class="relative flex flex-col items-center gap-20 pt-40">
 	<StarsBackground className="-z-10 fixed" starDensity={0.00003} />
 	<StarsBackground starDensity={0.00003} className="-z-10" />
 	<h1 class="text-shadow-glow-white text-center text-8xl tracking-tighter text-white">
@@ -32,21 +39,21 @@
 			<Marquee className="[--duration:60s]">
 				{#each companiesAndOrganizations as url, index}
 					{#if index < companiesAndOrganizations.length / 3}
-						<img src={url} alt="" class="mx-6 h-[50px] select-none" />
+						<img src={url as string} alt="" class="mx-6 h-[50px] select-none" />
 					{/if}
 				{/each}
 			</Marquee>
 			<Marquee className="[--duration:60s]" reverse={true}>
 				{#each companiesAndOrganizations as url, index}
 					{#if index >= companiesAndOrganizations.length / 3 && index < (companiesAndOrganizations.length / 3) * 2}
-						<img src={url} alt="" class="mx-6 h-[50px] select-none" />
+						<img src={url as string} alt="" class="mx-6 h-[50px] select-none" />
 					{/if}
 				{/each}
 			</Marquee>
 			<Marquee className="[--duration:60s]">
 				{#each companiesAndOrganizations as url, index}
 					{#if index >= (companiesAndOrganizations.length / 3) * 2 && index < companiesAndOrganizations.length}
-						<img src={url} alt="" class="mx-6 h-[50px] select-none" />
+						<img src={url as string} alt="" class="mx-6 h-[50px] select-none" />
 					{/if}
 				{/each}
 			</Marquee>
@@ -58,6 +65,26 @@
 		>
 			Community Initiatives
 		</h1>
-		<div class="flex flex-col gap-4 opacity-50"></div>
+		<p class="text-md mb-4 w-[900px] text-center text-gray-400">
+			We have supported these organizations through donation.
+		</p>
+		<div class="flex gap-12 opacity-50">
+			{#each communityInitiatives as url}
+				<img src={url as string} alt={url as string} class="h-[100px] select-none" />
+			{/each}
+		</div>
+	</div>
+	<div class="flex flex-col items-center gap-4">
+		<h1
+			class="mb-4 font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8"
+		>
+			Charitable Causes
+		</h1>
+		<p class="text-md mb-4 w-[900px] text-center text-gray-400">
+			We have supported these causes through donations.
+		</p>
+		<div class="flex gap-12 opacity-50">
+			<h1 class="text-5xl font-bold text-white">2025 LA Wildfires</h1>
+		</div>
 	</div>
 </div>
