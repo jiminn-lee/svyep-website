@@ -10,8 +10,8 @@
 </svelte:head>
 
 <div class="relative flex flex-col items-center pt-30 sm:pt-40">
-	<StarsBackground className="-z-10 fixed" starDensity={0.00003} />
-	<StarsBackground starDensity={0.00003} className="-z-10" />
+	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
+	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<img src="/images/join/01.webp" alt="" class=" fixed -top-40 -z-10 opacity-20" />
 	<div class="flex flex-col items-center">
 		<h1 class="text-shadow-glow-white text-center text-8xl tracking-tighter text-white">

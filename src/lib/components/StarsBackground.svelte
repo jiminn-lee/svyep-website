@@ -2,7 +2,6 @@
 	import { cn } from '$lib/utils/cn';
 	import { onMount, onDestroy } from 'svelte';
 
-	// Types
 	interface StarProps {
 		x: number;
 		y: number;
@@ -17,10 +16,9 @@
 		twinkleProbability = 0.7,
 		minTwinkleSpeed = 0.5,
 		maxTwinkleSpeed = 1,
-		className = ''
+		class: className
 	} = $props();
 
-	// Canvas ref + state
 	let canvas: HTMLCanvasElement | null = null;
 	let ctx: CanvasRenderingContext2D | null = null;
 
@@ -28,7 +26,6 @@
 	let rafId: number | null = null;
 	let resizeObserver: ResizeObserver | null = null;
 
-	// Track size so we can regenerate when props change
 	let width = 0;
 	let height = 0;
 
@@ -70,7 +67,6 @@
 
 		const t = Date.now() * 0.001;
 		for (const star of stars) {
-			// twinkle
 			if (star.twinkleSpeed !== null) {
 				star.opacity = 0.5 + Math.abs(Math.sin(t / star.twinkleSpeed) * 0.5);
 			}
@@ -90,13 +86,11 @@
 
 		resizeAndRegenerate();
 
-		// Observe size changes
 		resizeObserver = new ResizeObserver(() => {
 			resizeAndRegenerate();
 		});
 		resizeObserver.observe(canvas);
 
-		// Start animation loop
 		rafId = requestAnimationFrame(render);
 	});
 
@@ -105,17 +99,13 @@
 		if (resizeObserver && canvas) resizeObserver.unobserve(canvas);
 	});
 
-	// If any of these props change at runtime, regenerate stars to reflect it
-
 	$effect(() => {
 		if (canvas) {
-			// These lines make Svelte track the deps:
 			starDensity;
 			allStarsTwinkle;
 			twinkleProbability;
 			minTwinkleSpeed;
 			maxTwinkleSpeed;
-			// Regenerate only if we have a non-zero size
 			if (width > 0 && height > 0) {
 				stars = generateStars(width, height);
 			}

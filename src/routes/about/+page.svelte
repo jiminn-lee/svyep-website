@@ -8,8 +8,8 @@
 </svelte:head>
 
 <div class="relative flex h-full flex-col items-center gap-20 pt-40">
-	<StarsBackground className="-z-10 fixed" starDensity={0.00003} />
-	<StarsBackground starDensity={0.00003} />
+	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
+	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<div class="flex w-full max-w-[1200px] flex-col bg-zinc-950 text-white">
 		<h1 class="text-shadow-glow-white font-serif text-7xl leading-loose tracking-tighter">
 			Our Vision<span class="text-indigo-600 text-shadow-none">.</span>

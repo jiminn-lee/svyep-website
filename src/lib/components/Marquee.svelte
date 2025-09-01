@@ -5,7 +5,7 @@
 		vertical = false,
 		repeat = 4,
 		reverse = false,
-		className = '',
+		class: className,
 		children
 	} = $props();
 	// export let pauseOnHover = false;

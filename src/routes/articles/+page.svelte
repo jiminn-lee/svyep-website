@@ -10,8 +10,11 @@
 	<title>Articles • SVYEP</title>
 </svelte:head>
 
-<StarsBackground starDensity={0.00003} className="-z-10" />
-<div class="mr-auto ml-auto flex min-h-screen flex-col items-center pt-30 text-white sm:pt-40">
+<div
+	class="relative mr-auto ml-auto flex min-h-screen flex-col items-center pt-30 text-white sm:pt-40"
+>
+	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
+	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<div class="flex flex-col items-center gap-4">
 		<h1
 			class="font-articles text-shadow-glow-white w-full text-center text-4xl text-wrap sm:text-6xl lg:text-8xl"

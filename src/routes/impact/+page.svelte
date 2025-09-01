@@ -37,8 +37,9 @@
 	<title>Impact • SVYEP</title>
 </svelte:head>
 
-<StarsBackground starDensity={0.00008} />
-<div class="flex flex-col items-center justify-center pt-40">
+<div class="relative flex flex-col items-center justify-center pt-40">
+	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
+	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<h1 class="text-shadow-glow-white -mb-40 text-9xl tracking-tighter text-white select-none">
 		SVYEP is <span class="text-shadow-glow-blue font-serif text-indigo-600 italic">global.</span>
 	</h1>

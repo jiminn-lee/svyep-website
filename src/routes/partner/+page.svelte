@@ -22,9 +22,13 @@
 	let isFormOpen = $state(false);
 </script>
 
+<svelte:head>
+	<title>Partner • SVYEP</title>
+</svelte:head>
+
 <div class="relative flex flex-col items-center pt-40">
-	<StarsBackground className="-z-10 fixed" starDensity={0.00003} />
-	<StarsBackground starDensity={0.00003} className="-z-10" />
+	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
+	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<h1 class="text-shadow-glow-white text-center text-8xl tracking-tighter text-white">
 		<span class="text-shadow-glow-blue font-bold text-indigo-600">PARTNER</span> with us.
 	</h1>
@@ -73,21 +77,21 @@
 			representatives in SVYEP hosted events.
 		</p>
 		<div class="flex flex-col gap-4 opacity-50">
-			<Marquee className="[--duration:60s]">
+			<Marquee class="[--duration:60s]">
 				{#each companiesAndOrganizations as url, index}
 					{#if index < companiesAndOrganizations.length / 3}
 						<img src={url as string} alt="" class="mx-6 h-[50px] select-none" />
 					{/if}
 				{/each}
 			</Marquee>
-			<Marquee className="[--duration:60s]" reverse={true}>
+			<Marquee class="[--duration:60s]" reverse={true}>
 				{#each companiesAndOrganizations as url, index}
 					{#if index >= companiesAndOrganizations.length / 3 && index < (companiesAndOrganizations.length / 3) * 2}
 						<img src={url as string} alt="" class="mx-6 h-[50px] select-none" />
 					{/if}
 				{/each}
 			</Marquee>
-			<Marquee className="[--duration:60s]">
+			<Marquee class="[--duration:60s]">
 				{#each companiesAndOrganizations as url, index}
 					{#if index >= (companiesAndOrganizations.length / 3) * 2 && index < companiesAndOrganizations.length}
 						<img src={url as string} alt="" class="mx-6 h-[50px] select-none" />
