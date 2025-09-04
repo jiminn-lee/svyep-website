@@ -17,7 +17,7 @@
 	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<div class="flex flex-col items-center gap-4">
 		<h1
-			class="font-articles text-shadow-glow-white w-full text-center text-4xl text-wrap sm:text-6xl lg:text-8xl"
+			class="font-articles text-shadow-glow-white w-full text-center text-4xl font-medium text-wrap sm:text-6xl lg:text-8xl"
 		>
 			The SVYEP Chronicle
 		</h1>
@@ -106,3 +106,5 @@
 		{/each}
 	</div>
 </div>
+
+<!-- no seconds, keep it to 1 minute -->
