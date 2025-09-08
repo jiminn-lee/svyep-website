@@ -1,56 +1,95 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/components/Button.svelte';
 	import StarsBackground from '$lib/components/StarsBackground.svelte';
 	import events from '$lib/data/events';
+	import { cn } from '$lib/utils/cn';
 	import { CaretRight } from 'phosphor-svelte';
+
+	let eventsContainer: HTMLElement = $state();
+	let focusedEvent = $state(1);
 </script>
 
 <svelte:head>
 	<title>Events • SVYEP</title>
 </svelte:head>
 
-<div class="relative flex flex-col items-center gap-10">
+<div class="relative flex flex-col items-center gap-10 pt-40">
 	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
 	<StarsBackground starDensity={0.00003} class="-z-10" />
-	<div
-		class="relative h-full w-full bg-linear-to-b bg-[url(/images/events/featured/thumbnail.webp)] bg-center py-52"
-	>
-		<div class="absolute inset-0 bg-black/80"></div>
-		<div class="relative z-10 flex flex-col items-center">
-			<h1 class="font-serif text-lg font-medium tracking-tighter text-indigo-600">FEATURED</h1>
-			<h1 class="text-8xl font-semibold tracking-tighter text-white">
-				{events.featured_event.name}
+	<h1 class="text-6xl font-medium tracking-tighter text-white">Featured Events</h1>
+	<div class="relative flex items-center" bind:this={eventsContainer}>
+		<button
+			class={cn(
+				'relative h-[400px] w-[600px] scale-0 rounded-3xl bg-[url(/images/events/featured/thumbnail.webp)] bg-cover p-4 transition duration-500',
+				focusedEvent != 0
+					? 'hover:shadow-glow-blue-hover scale-60 -skew-y-12 opacity-50'
+					: 'shadow-glow-blue-hover scale-100'
+			)}
+			onclick={() => {
+				focusedEvent = 0;
+				eventsContainer.style.left = '600px';
+			}}
+		>
+			<div class="absolute inset-0 -z-10 rounded-3xl bg-black/80"></div>
+			<h2 class="font-serif text-xs font-light tracking-tighter text-indigo-400">
+				{events.featured_events[0].subtitle}
+			</h2>
+			<h1 class="z-10 mt-2 text-4xl font-semibold tracking-tighter text-white">
+				{events.featured_events[0].title}
 			</h1>
-			<p class="w-[900px] text-center text-gray-400">
-				{events.featured_event.description}
+			<p class="pt-4 text-sm font-light text-gray-400">
+				{events.featured_events[0].description}
 			</p>
-			<Button class="mt-8">See details</Button>
-		</div>
-	</div>
-	<div class="flex flex-col items-center">
-		<h1 class="text-5xl font-medium tracking-tighter text-white">Past Events</h1>
-		<div class="grid grid-cols-4">
-			{#each events.past_events as event}
-				<div
-					class="shadow-glow-gray z-10 flex w-[300px] flex-col items-center justify-center gap-2 rounded-3xl border-2 border-white/5 bg-gray-800/80 text-white transition-all hover:border-white/50 hover:bg-gray-700"
-				>
-					{#if event.thumbnail != ''}
-						<img src="" alt="" />
-					{:else}
-						<div class="h-[200px] w-full rounded-t-3xl bg-gray-400"></div>
-					{/if}
-					<div class="flex flex-col items-center p-6">
-						<h2 class="text-sm text-gray-400">{event.date}</h2>
-						<h1 class="font-semiboldJ text-center text-2xl">
-							{event.name}
-						</h1>
-						<button
-							class="mt-4 flex cursor-pointer items-center gap-1 text-sm font-light text-white hover:underline"
-							>Learn More<CaretRight />
-						</button>
-					</div>
-				</div>
-			{/each}
-		</div>
+		</button>
+		<button
+			class={cn(
+				'relative h-[400px] w-[600px] scale-0 rounded-3xl bg-[url(/images/events/featured/thumbnail.webp)] bg-cover p-4 transition duration-500',
+				focusedEvent === 0
+					? 'hover:shadow-glow-blue-hover scale-60 skew-y-12 opacity-50'
+					: focusedEvent === 2
+						? 'hover:shadow-glow-blue-hover scale-60 -skew-y-12 opacity-50'
+						: focusedEvent === 1
+							? 'shadow-glow-blue-hover scale-100'
+							: ''
+			)}
+			onclick={() => {
+				focusedEvent = 1;
+				eventsContainer.style.left = '0px';
+			}}
+		>
+			<div class="absolute inset-0 -z-10 rounded-3xl bg-black/80"></div>
+			<h2 class="font-serif text-xs font-light tracking-tighter text-indigo-400">
+				{events.featured_events[1].subtitle}
+			</h2>
+			<h1 class="z-10 mt-2 text-4xl font-semibold tracking-tighter text-white">
+				{events.featured_events[1].title}
+			</h1>
+			<p class="pt-4 text-sm font-light text-gray-400">
+				{events.featured_events[1].description}
+			</p>
+		</button>
+		<button
+			class={cn(
+				'relative h-[400px] w-[600px] scale-0 rounded-3xl bg-[url(/images/events/featured/thumbnail.webp)] bg-cover p-4 transition duration-500',
+				focusedEvent != 2
+					? 'hover:shadow-glow-blue-hover scale-60 skew-y-12 opacity-50'
+					: 'shadow-glow-blue-hover scale-100'
+			)}
+			onclick={() => {
+				focusedEvent = 2;
+				eventsContainer.style.left = '-600px';
+			}}
+		>
+			<div class="absolute inset-0 -z-10 rounded-3xl bg-black/80"></div>
+			<h2 class="font-serif text-xs font-light tracking-tighter text-indigo-400">
+				{events.featured_events[2].subtitle}
+			</h2>
+			<h1 class="z-10 mt-2 text-4xl font-semibold tracking-tighter text-white">
+				{events.featured_events[2].title}
+			</h1>
+			<p class="pt-4 text-sm font-light text-gray-400">
+				{events.featured_events[2].description}
+			</p>
+		</button>
 	</div>
 </div>

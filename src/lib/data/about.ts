@@ -2,9 +2,9 @@ const about = {
 	team: [
 		{
 			name: 'Bretton Lam',
-			position: 'Founder and CEO',
+			position: 'Co-Founder and CEO',
 			description:
-				'Bretton is a senior at Basis Independent Silicon Valley in San Jose, California. He is very passionate about business and entrepreneurship and also enjoys playing sports such as basketball and football. Through SVYEP, he hopes to further develop his entrepreneurial skills while inspiring future generations by providing them with unique opportunities to network with successful business leaders.'
+				'Bretton is a senior at Basis Independent Silicon Valley in San Jose, California. He is very passionate about business and entrepreneurship and also enjoys playing sports such as basketball. Through SVYEP, he hopes to further develop his entrepreneurial skills while inspiring future generations by providing them with unique opportunities to network with successful business leaders.'
 		},
 		{
 			name: 'Isabella Liang',
@@ -37,34 +37,16 @@ const about = {
 				'Zibo is a senior at Skyline High School in Salt Lake City, Utah. He enrolls himself in a multitude of extracurriculars, ranging from entrepreneurial marketing to biomedical research to competitive piano. He hopes to implement his developed skills from being founders and leaders of school clubs into SVYEP to enhance the connection and education regarding entrepreneurship for future generations.'
 		},
 		{
-			name: 'Leana Zhou',
-			position: 'Finance Manager',
+			name: 'Maya Sharma',
+			position: 'Outreach Coordinator',
 			description:
-				'Leana is a senior at The Harker School in California. She is very passionate about business, especially finance, and drawing. Through SVYEP, Leana hopes to help create a tight-knit network in which many others can recognize and develop their own passion and skills in the business world.'
+				'Maya is a junior at Menlo School, where she’s an active member on the investing team, investing club, the debate team, and the basketball team. She’s highly interested in pursuing business and investing. Through SVYEP, she is passionate about making the business world more accessible to youth.'
 		},
 		{
 			name: 'Anthony Wang',
-			position: 'Marketing Manager',
+			position: 'Marketing',
 			description:
 				'Anthony is a junior at Stratford Preparatory in California, where he is the President of the Data Science Club. He is passionate about entrepreneurship, computer science, and artificial intelligence and plays tennis and football. At SVYEP, he seeks to develop his own entrepreneurial skills and support other high schoolers by building connections and organizing events.'
-		},
-		{
-			name: 'Ray Zhu',
-			position: 'Marketing',
-			description:
-				"Ray is a junior at Lynbrook high school in California. He's interested in politics and math, but is the most interested in business. At SVYEP, Ray hopes to help youth get a better understanding of entrepreneurship and bring them closer to a broad network of professionals."
-		},
-		{
-			name: 'Frank Zhu',
-			position: 'Marketing',
-			description:
-				'Frank is a junior at Bainbridge High School in Washington, with a passion towards soccer and frisbee. He loves logistics based games such as chess and is aspiring to pursue a career in finance or mathematics.'
-		},
-		{
-			name: 'Lotus Wu',
-			position: 'Design',
-			description:
-				'Lotus is a freshman at The University of Washington. She is passionate about numerous fields such as business, design, and dance and hopes to pursue a career that blends business and the arts. Through SVYEP, Lotus wants to build a diverse space that fosters new generations of entrepreneurship by providing unique opportunities and meaningful connections.'
 		}
 	],
 	advisors: [
