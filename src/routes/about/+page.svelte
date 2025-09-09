@@ -37,7 +37,7 @@
 		<div class="grid max-w-[1200px] grid-cols-3 gap-12">
 			{#each about.team as member}
 				<div class="flex flex-col items-center">
-					<div class="mb-4 size-56 rounded-full bg-gray-400"></div>
+					<img src={member.image} alt="" class="mb-4 size-56 rounded-full object-cover" />
 					<h1 class="font-serif text-2xl tracking-tighter">{member.name}</h1>
 					<h2 class="font-semibold tracking-tighter text-indigo-600">{member.position}</h2>
 					<p class="mt-4 text-justify text-sm font-extralight text-gray-400">
@@ -54,7 +54,7 @@
 		<div class="grid max-w-[1200px] grid-cols-3 gap-12">
 			{#each about.advisors as advisor}
 				<div class="flex flex-col items-center">
-					<div class="mb-4 size-56 rounded-full bg-gray-400"></div>
+					<img src={advisor.image} alt="" class="mb-4 size-56 rounded-full object-cover" />
 					<h1 class="font-serif text-2xl tracking-tighter">{advisor.name}</h1>
 					<h2 class="font-semibold tracking-tighter text-indigo-600">{advisor.position}</h2>
 					<p class="mt-4 text-justify text-sm font-extralight text-gray-400">
