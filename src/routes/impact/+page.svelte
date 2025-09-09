@@ -37,6 +37,7 @@
 			.backgroundColor('#00000000')
 			.atmosphereColor('#4338ca');
 		globe.controls().enableZoom = false;
+		globe.controls().maxDistance = 250;
 	});
 </script>
 
@@ -48,24 +49,22 @@
 	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
 	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<h2 class="flex items-center gap-1 text-gray-400">
-		<MouseScroll size={20} /> Scroll to zoom <span class="mx-2"></span>
+		<MouseScroll size={20} /> Drag to move around<span class="mx-2"></span>
 		<HandPointing /> Hover & click on starred locations
 	</h2>
-	<h1 class="text-shadow-glow-white -mb-40 text-9xl tracking-tighter text-white select-none">
+	<h2 class="mt-4 text-4xl font-medium tracking-tighter text-white">
+		<span class="font-serif text-5xl text-indigo-600 italic">18</span> states,
+		<span class="font-serif text-5xl text-indigo-600 italic">9</span> countries
+	</h2>
+	<h1 class="text-shadow-glow-white -mb-10 text-9xl tracking-tighter text-white select-none">
 		SVYEP is <span class="text-shadow-glow-blue font-serif text-indigo-600 italic">global.</span>
 	</h1>
 	<div bind:this={globeElement}></div>
 	{#if selectedLocation.location}
-		<p class="z-10 -mt-20 w-10/12 text-center text-xs text-gray-400">
+		<p class="z-10 -mt-20 mb-40 w-10/12 text-center text-sm text-gray-400">
 			{#each selectedLocation.location.schools as school}
 				{school},{' '}
 			{/each}
 		</p>
 	{/if}
 </div>
-
-<!-- click marker, list of schools pop up on the left -->
-<!-- instructions -->
-
-<!-- events, parrtner, join, donate -->
-<!-- 18 states, 9 countries -->
