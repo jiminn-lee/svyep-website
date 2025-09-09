@@ -5,6 +5,7 @@
 	import home from '$lib/data/home';
 	import CaretDown from 'phosphor-svelte/lib/CaretDown';
 	import StarsBackground from '$lib/components/StarsBackground.svelte';
+	import AnimateNumber from '$lib/components/AnimateNumber.svelte';
 </script>
 
 <svelte:head>
@@ -47,7 +48,7 @@
 			<h1
 				class="text-shadow-glow-white text-[10rem] leading-32 font-black tracking-tighter text-white"
 			>
-				{home.statistics.members}
+				<AnimateNumber value={home.statistics.members} />
 			</h1>
 			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-600 italic">
 				members.
@@ -64,9 +65,9 @@
 	</div>
 	<div class="flex flex-col gap-4">
 		<h1
-			class="text-shadow-glow-white text-[10rem] leading-32 font-black tracking-tighter text-white"
+			class="text-shadow-glow-white flex text-[10rem] leading-32 font-black tracking-tighter text-white"
 		>
-			{home.statistics.raised}
+			$<AnimateNumber value={home.statistics.raised} />
 		</h1>
 		<div class="flex gap-8">
 			<h2
@@ -89,7 +90,7 @@
 	<div class="flex flex-col items-center gap-4">
 		<div class="flex gap-4">
 			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
-				{home.statistics.impacted_students}
+				<AnimateNumber value={home.statistics.impacted_students} />
 			</h1>
 			<h2
 				class="font-serif text-7xl leading-16 font-medium tracking-tighter text-indigo-600 italic"
@@ -119,7 +120,7 @@
 		</p>
 		<div>
 			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
-				{home.statistics.internships}
+				<AnimateNumber value={home.statistics.internships} />
 			</h1>
 			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-600 italic">
 				internships.
@@ -129,7 +130,7 @@
 	<div class="flex flex-col">
 		<div class="flex items-center gap-8">
 			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
-				{home.statistics.businesses_worked_with}
+				<AnimateNumber value={home.statistics.businesses_worked_with} />
 			</h1>
 			<p class="w-[500px] text-gray-400">
 				<span class="text-white"

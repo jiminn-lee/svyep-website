@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AnimateNumber from '$lib/components/AnimateNumber.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import StarsBackground from '$lib/components/StarsBackground.svelte';
 	import donate from '$lib/data/donate';
@@ -21,8 +22,8 @@
 		industry leaders. Every dollar donated directly goes toward supporting the next generation of
 		youth entrepreneurs and giving them the opportunities they need to succeed.
 	</p>
-	<h1 class="mt-40 text-[10rem] leading-32 font-black tracking-tighter text-white">
-		{donate.amount_raised}
+	<h1 class="mt-40 flex text-[10rem] leading-32 font-black tracking-tighter text-white">
+		$<AnimateNumber value={donate.amount_raised} />+
 	</h1>
 	<h2
 		class="font-serif text-7xl font-medium tracking-tighter text-indigo-600 italic
