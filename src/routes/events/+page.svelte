@@ -25,7 +25,7 @@
 	<div class="relative flex items-center" bind:this={eventsContainer}>
 		<button
 			class={cn(
-				'relative flex h-[600px] w-[500px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500',
+				'relative flex h-[650px] w-[500px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500',
 				focusedEvent === 1
 					? 'hover:shadow-glow-blue-hover left-10 scale-70 skew-y-6 opacity-30'
 					: focusedEvent === 2
@@ -60,14 +60,14 @@
 				<h1 class="z-10 mt-2 text-4xl font-semibold tracking-tighter text-white">
 					{events.featured_events[0].title}
 				</h1>
-				<p class="pt-4 text-sm font-light text-gray-400">
+				<p class="pt-4 font-light text-gray-400">
 					{events.featured_events[0].description}
 				</p>
 			</div>
 		</button>
 		<button
 			class={cn(
-				'relative flex h-[600px] w-[500px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500',
+				'relative flex h-[650px] w-[500px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500',
 				focusedEvent === 0
 					? 'hover:shadow-glow-blue-hover right-10 scale-70 -skew-y-6 opacity-30'
 					: focusedEvent === 2
@@ -102,14 +102,14 @@
 				<h1 class="z-10 mt-2 text-4xl font-semibold tracking-tighter text-white">
 					{events.featured_events[1].title}
 				</h1>
-				<p class="pt-4 text-sm font-light text-gray-400">
+				<p class="pt-4 font-light text-gray-400">
 					{events.featured_events[1].description}
 				</p>
 			</div>
 		</button>
 		<button
 			class={cn(
-				'relative flex h-[600px] w-[500px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500',
+				'relative flex h-[650px] w-[500px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500',
 				focusedEvent === 1
 					? 'hover:shadow-glow-blue-hover right-10 scale-70 -skew-y-6 opacity-30'
 					: focusedEvent === 0
@@ -144,7 +144,7 @@
 				<h1 class="z-10 mt-2 text-4xl font-semibold tracking-tighter text-white">
 					{events.featured_events[2].title}
 				</h1>
-				<p class="pt-4 text-sm font-light text-gray-400">
+				<p class="pt-4 font-light text-gray-400">
 					{events.featured_events[2].description}
 				</p>
 			</div>
@@ -175,13 +175,13 @@
 				)}
 			>
 				<div>
-					<h2 class="font-serif font-light tracking-tighter text-indigo-400">
+					<h2 class="font-serif font-light text-indigo-400">
 						{event.subtitle}
 					</h2>
 					<h1 class="z-10 mt-2 text-4xl font-semibold tracking-tighter text-white">
 						{event.title}
 					</h1>
-					<p class="pt-4 text-sm font-light text-gray-400">
+					<p class="pt-4 font-light text-gray-400">
 						{event.description}
 					</p>
 				</div>
