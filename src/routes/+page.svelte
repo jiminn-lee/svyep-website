@@ -17,7 +17,7 @@
 	<Spotlight />
 	<div class="my-[100px] flex flex-wrap items-center justify-center">
 		<div class="h-[750px] w-[800px]">
-			<DotLottieSvelte src="/animation3.json" autoplay segment={[0, 209]} />
+			<DotLottieSvelte src="/animation.json" autoplay segment={[0, 209]} />
 		</div>
 		<div class="mt-15 mr-36 -ml-16 flex w-fit flex-col items-center justify-center gap-12">
 			<h1

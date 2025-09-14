@@ -33,8 +33,8 @@
 		<span class="text-shadow-glow-blue font-bold text-indigo-600">PARTNER</span> with us.
 	</h1>
 	<Button
-		variant="secondary"
-		class="my-5 flex items-center gap-2"
+		size="lg"
+		class="mt-4 mb-20 flex items-center gap-2"
 		onclick={() => {
 			isFormOpen = !isFormOpen;
 		}}
@@ -66,7 +66,7 @@
 	{/if}
 	<div class="my-10 flex flex-col items-center gap-4">
 		<h1
-			class="mb-4 font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8"
+			class="mb-4 font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-[5px] underline-offset-8"
 		>
 			Companies & Organizations
 		</h1>
@@ -102,7 +102,7 @@
 	</div>
 	<div class="my-10 flex flex-col items-center gap-4">
 		<h1
-			class="mb-4 font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8"
+			class="mb-4 font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-[5px] underline-offset-8"
 		>
 			Community Initiatives
 		</h1>
@@ -117,7 +117,7 @@
 	</div>
 	<div class="my-10 flex flex-col items-center gap-4">
 		<h1
-			class="mb-4 font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8"
+			class="mb-4 font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-[5px] underline-offset-8"
 		>
 			Charitable Causes
 		</h1>
@@ -129,5 +129,3 @@
 		</div>
 	</div>
 </div>
-
-<!-- straight underline, bigger interest form, st judes in the middle-->
