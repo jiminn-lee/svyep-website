@@ -53,8 +53,8 @@
 		<HandPointing /> Hover & click on starred locations
 	</h2>
 	<h2 class="mt-4 text-4xl font-medium tracking-tighter text-white">
-		<span class="font-serif text-5xl text-indigo-600 italic">18</span> states,
-		<span class="font-serif text-5xl text-indigo-600 italic">9</span> countries
+		<span class="font-serif text-5xl text-indigo-600">18</span> states,
+		<span class="font-serif text-5xl text-indigo-600">9</span> countries
 	</h2>
 	<h1 class="text-shadow-glow-white -mb-10 text-9xl tracking-tighter text-white select-none">
 		SVYEP is <span class="text-shadow-glow-blue font-serif text-indigo-600 italic">global.</span>
@@ -68,3 +68,5 @@
 		</p>
 	{/if}
 </div>
+
+<!-- move this under -->

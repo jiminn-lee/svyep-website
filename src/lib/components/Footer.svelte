@@ -26,7 +26,7 @@
 			<div class="">
 				<h1 class="font-display mt-0.5 text-3xl leading-6 tracking-tight text-white">SVYEP</h1>
 				<p class=" text-[0.5rem] leading-tight font-extralight text-gray-300">
-					SILICON VALLEY YOUTH <br /> ENTREPRENEURSHIP PROGRA3
+					SILICON VALLEY YOUTH <br /> ENTREPRENEURSHIP PROGRAM
 				</p>
 			</div>
 		</a>

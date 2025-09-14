@@ -5,7 +5,7 @@
 	import { cn } from '$lib/utils/cn';
 	import { CaretLeft, CaretRight } from 'phosphor-svelte';
 
-	let eventsContainer: HTMLElement = $state();
+	let eventsContainer = $state() as HTMLElement;
 	let focusedEvent = $state(1);
 
 	$effect(() => {
@@ -198,3 +198,5 @@
 		{/each}
 	</div>
 </div>
+
+<!-- make cards larger, especially middle, text for events larger -->

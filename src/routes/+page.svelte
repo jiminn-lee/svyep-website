@@ -15,9 +15,9 @@
 <StarsBackground starDensity={0.00003} class="fixed -z-10" />
 <main class="relative h-full">
 	<Spotlight />
-	<div class="my-[220px] flex flex-wrap items-center justify-center">
-		<div class="h-[550px] w-[700px]">
-			<DotLottieSvelte src="/animation.lottie" autoplay segment={[0, 209]} />
+	<div class="my-[100px] flex flex-wrap items-center justify-center">
+		<div class="h-[750px] w-[800px]">
+			<DotLottieSvelte src="/animation3.json" autoplay segment={[0, 209]} />
 		</div>
 		<div class="mt-15 mr-36 -ml-16 flex w-fit flex-col items-center justify-center gap-12">
 			<h1
@@ -46,9 +46,9 @@
 	<div class="flex items-center gap-8">
 		<div class="text-right">
 			<h1
-				class="text-shadow-glow-white text-[10rem] leading-32 font-black tracking-tighter text-white"
+				class="text-shadow-glow-white flex w-[450px] text-[10rem] leading-32 font-black tracking-tighter text-white"
 			>
-				<AnimateNumber value={home.statistics.members} />
+				<AnimateNumber value={home.statistics.members} />+
 			</h1>
 			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-600 italic">
 				members.
@@ -67,7 +67,7 @@
 		<h1
 			class="text-shadow-glow-white flex text-[10rem] leading-32 font-black tracking-tighter text-white"
 		>
-			$<AnimateNumber value={home.statistics.raised} />
+			$<AnimateNumber value={home.statistics.raised} />+
 		</h1>
 		<div class="flex gap-8">
 			<h2
@@ -89,8 +89,8 @@
 	</div>
 	<div class="flex flex-col items-center gap-4">
 		<div class="flex gap-4">
-			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
-				<AnimateNumber value={home.statistics.impacted_students} />
+			<h1 class="flex w-[550px] text-[10rem] leading-32 font-black tracking-tighter text-white">
+				<AnimateNumber value={home.statistics.impacted_students} />+
 			</h1>
 			<h2
 				class="font-serif text-7xl leading-16 font-medium tracking-tighter text-indigo-600 italic"
@@ -119,8 +119,8 @@
 			skills and insights that prepare them for careers in various industries.
 		</p>
 		<div>
-			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
-				<AnimateNumber value={home.statistics.internships} />
+			<h1 class="flex text-[10rem] leading-32 font-black tracking-tighter text-white">
+				<AnimateNumber value={home.statistics.internships} />+
 			</h1>
 			<h2 class="font-serif text-7xl font-medium tracking-tighter text-indigo-600 italic">
 				internships.
@@ -129,8 +129,8 @@
 	</div>
 	<div class="flex flex-col">
 		<div class="flex items-center gap-8">
-			<h1 class="text-[10rem] leading-32 font-black tracking-tighter text-white">
-				<AnimateNumber value={home.statistics.businesses_worked_with} />
+			<h1 class="flex w-[250px] text-[10rem] leading-32 font-black tracking-tighter text-white">
+				<AnimateNumber value={home.statistics.businesses_worked_with} />+
 			</h1>
 			<p class="w-[500px] text-gray-400">
 				<span class="text-white"
@@ -264,3 +264,5 @@
 	</h1>
 	<Button href="/join" size="lg">Join Us</Button>
 </section>
+
+<!-- + sign after every number, animation larger -->
