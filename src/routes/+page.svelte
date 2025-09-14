@@ -264,5 +264,3 @@
 	</h1>
 	<Button href="/join" size="lg">Join Us</Button>
 </section>
-
-<!-- + sign after every number, animation larger -->

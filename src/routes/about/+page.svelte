@@ -34,9 +34,9 @@
 		<h1 class="text-shadow-glow-white font-serif text-9xl leading-loose tracking-tighter">
 			Meet the Team<span class="text-indigo-600 text-shadow-none">.</span>
 		</h1>
-		<div class="grid max-w-[1200px] grid-cols-3 gap-12">
+		<div class="flex max-w-[1200px] flex-wrap justify-center gap-12">
 			{#each about.team as member}
-				<div class="flex flex-col items-center">
+				<div class="flex w-80 flex-col items-center">
 					<img src={member.image} alt="" class="mb-4 size-56 rounded-full object-cover" />
 					<h1 class="font-serif text-2xl tracking-tighter">{member.name}</h1>
 					<h2 class="font-semibold tracking-tighter text-indigo-600">{member.position}</h2>
@@ -51,9 +51,9 @@
 		<h1 class="font-serif text-9xl leading-loose tracking-tighter">
 			Advisors<span class="text-indigo-600">.</span>
 		</h1>
-		<div class="grid max-w-[1200px] grid-cols-3 gap-12">
+		<div class="flex max-w-[1200px] flex-wrap justify-center gap-12">
 			{#each about.advisors as advisor}
-				<div class="flex flex-col items-center">
+				<div class="flex w-80 flex-col items-center">
 					<img src={advisor.image} alt="" class="mb-4 size-56 rounded-full object-cover" />
 					<h1 class="font-serif text-2xl tracking-tighter">{advisor.name}</h1>
 					<h2 class="font-semibold tracking-tighter text-indigo-600">{advisor.position}</h2>
@@ -65,5 +65,3 @@
 		</div>
 	</div>
 </div>
-
-<!-- center advisors -->
