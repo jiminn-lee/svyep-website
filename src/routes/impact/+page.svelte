@@ -52,13 +52,13 @@
 		<MouseScroll size={20} /> Drag to move around<span class="mx-2"></span>
 		<HandPointing /> Hover & click on starred locations
 	</h2>
-	<h2 class="mt-4 text-4xl font-medium tracking-tighter text-white">
+	<h1 class="text-shadow-glow-white text-9xl tracking-tighter text-white select-none">
+		SVYEP is <span class="text-shadow-glow-blue font-serif text-indigo-600 italic">global.</span>
+	</h1>
+	<h2 class="-mb-4 text-4xl font-medium tracking-tighter text-white">
 		<span class="font-serif text-5xl text-indigo-600">18</span> states,
 		<span class="font-serif text-5xl text-indigo-600">9</span> countries
 	</h2>
-	<h1 class="text-shadow-glow-white -mb-10 text-9xl tracking-tighter text-white select-none">
-		SVYEP is <span class="text-shadow-glow-blue font-serif text-indigo-600 italic">global.</span>
-	</h1>
 	<div bind:this={globeElement}></div>
 	{#if selectedLocation.location}
 		<p class="z-10 -mt-20 mb-40 w-10/12 text-center text-sm text-gray-400">
