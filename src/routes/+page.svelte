@@ -6,6 +6,7 @@
 	import CaretDown from 'phosphor-svelte/lib/CaretDown';
 	import StarsBackground from '$lib/components/StarsBackground.svelte';
 	import AnimateNumber from '$lib/components/AnimateNumber.svelte';
+	import AnimateText from '$lib/components/AnimateText.svelte';
 
 	let firstScroll: number = $state(0);
 	let secondScroll = $derived(firstScroll - 300);
@@ -13,9 +14,7 @@
 	let fourthScroll = $derived(thirdScroll - 600);
 	let fifthScoll = $derived(fourthScroll - 400);
 
-	$inspect(firstScroll);
-
-	let imageScroll = $derived(firstScroll - 2100);
+	let imageScroll = $derived(firstScroll - 1900);
 
 	const images = [
 		{
@@ -73,16 +72,43 @@
 	<Spotlight />
 	<div class="my-[100px] flex flex-wrap items-center justify-center">
 		<div class="h-[750px] w-[800px]">
-			<!-- <DotLottieSvelte src="/animation.json" autoplay segment={[0, 209]} /> -->
+			<DotLottieSvelte src="/animation.json" autoplay segment={[0, 209]} />
 		</div>
 		<div class="mt-15 mr-36 -ml-16 flex w-fit flex-col items-center justify-center gap-12">
-			<h1
+			<div class="flex flex-col items-end">
+				<!-- <h1
 				class="text-shadow-glow-white text-right text-7xl leading-[4.5rem] tracking-tighter text-white"
-			>
+				>
 				Empowering <br /> the
 				<span class="text-shadow-glow-blue font-serif text-indigo-600 italic">future</span>
 				of <br /> entrepreneurs.
-			</h1>
+				</h1> -->
+				<AnimateText
+					class="text-shadow-glow-white text-right text-7xl leading-[4.5rem] tracking-tighter text-white"
+				>
+					Empowering
+				</AnimateText>
+				<div class="flex gap-4">
+					<AnimateText
+						class="text-shadow-glow-white text-right text-7xl leading-[4.5rem] tracking-tighter text-white"
+					>
+						the
+					</AnimateText>
+					<AnimateText class="text-shadow-glow-blue font-serif text-7xl text-indigo-600 italic"
+						>future</AnimateText
+					>
+					<AnimateText
+						class="text-shadow-glow-white text-right text-7xl leading-[4.5rem] tracking-tighter text-white"
+					>
+						of
+					</AnimateText>
+				</div>
+				<AnimateText
+					class="text-shadow-glow-white text-right text-7xl leading-[4.5rem] tracking-tighter text-white"
+				>
+					entrepreneurs.
+				</AnimateText>
+			</div>
 			<Button href="/join" size="lg">Get started</Button>
 		</div>
 	</div>
@@ -221,7 +247,7 @@
 </section>
 
 <!-- section-2 -->
-<section class="relative flex items-center justify-center py-[500px]">
+<section class="relative flex items-center justify-center py-[400px]">
 	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<div class="relative flex flex-col items-center gap-10">
 		<div
@@ -281,15 +307,29 @@
 </section>
 
 <!-- section-3 -->
-<section class="relative flex flex-col items-center gap-20">
+<section class="relative flex flex-col items-center gap-14">
 	<StarsBackground starDensity={0.00003} class="-z-10" />
-	<h1 class="mb-20 text-center text-9xl leading-24 tracking-tighter text-white">
+	<!-- <h1 class="mb-20 text-center text-9xl leading-24 tracking-tighter text-white">
 		We offer resources for <br />
 		<span
 			class="font-serif italic underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8 text-shadow-none"
 			>your</span
 		> success.
-	</h1>
+	</h1> -->
+	<div class="flex flex-col items-center">
+		<AnimateText class="text-center text-9xl leading-24 tracking-tighter text-white"
+			>We offer resources for</AnimateText
+		>
+		<div class="flex gap-6">
+			<AnimateText
+				class="font-serif text-9xl leading-24 tracking-tighter text-white italic underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8 text-shadow-none"
+				>your</AnimateText
+			>
+			<AnimateText class="text-center text-9xl leading-24 tracking-tighter text-white"
+				>success</AnimateText
+			>
+		</div>
+	</div>
 	<div class="flex flex-col">
 		<div class="z-10 flex">
 			<h1 class="font-sans text-[11rem] font-bold tracking-tighter text-white text-shadow-lg">
@@ -306,7 +346,7 @@
 			</ul>
 		</div>
 	</div>
-	<CaretDown size={80} class="text-gray-400" />
+	<CaretDown size={80} class="animate-bounce text-gray-400" />
 	<div class="flex flex-col items-end">
 		<div class="z-10 flex">
 			<h2 class=" mt-16 mr-4 font-serif text-6xl font-semibold text-indigo-600">EXPERIENCE</h2>
@@ -323,7 +363,7 @@
 			<img src="/images/home/S302.webp" alt="" class="mr-1 h-auto w-[300px] rounded-3xl" />
 		</div>
 	</div>
-	<CaretDown size={80} class="text-gray-400" />
+	<CaretDown size={80} class="animate-bounce text-gray-400" />
 	<div class="flex flex-col items-center">
 		<h2 class="font-serif text-6xl font-semibold text-indigo-600">EDUCATION</h2>
 		<h1
