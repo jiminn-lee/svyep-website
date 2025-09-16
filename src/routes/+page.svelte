@@ -6,18 +6,74 @@
 	import CaretDown from 'phosphor-svelte/lib/CaretDown';
 	import StarsBackground from '$lib/components/StarsBackground.svelte';
 	import AnimateNumber from '$lib/components/AnimateNumber.svelte';
+
+	let firstScroll: number = $state(0);
+	let secondScroll = $derived(firstScroll - 300);
+	let thirdScroll = $derived(secondScroll - 500);
+	let fourthScroll = $derived(thirdScroll - 600);
+	let fifthScoll = $derived(fourthScroll - 400);
+
+	$inspect(firstScroll);
+
+	let imageScroll = $derived(firstScroll - 2100);
+
+	const images = [
+		{
+			class:
+				'shadow-glow-gray hover:shadow-glow-blue absolute w-[250px] -rotate-12 rounded-3xl opacity-30 transition-opacity duration-500 hover:opacity-100',
+			src: '/images/home/S201.webp',
+			top: -200,
+			left: -250
+		},
+		{
+			class:
+				'shadow-glow-gray hover:shadow-glow-blue absolute w-[400px] rounded-3xl opacity-30 transition-opacity duration-500 hover:opacity-100',
+			src: '/images/home/S202.webp',
+			top: -250,
+			left: 120
+		},
+		{
+			class:
+				'shadow-glow-gray hover:shadow-glow-blue absolute w-[200px] rotate-12 rounded-3xl opacity-30 transition-opacity duration-500 hover:opacity-100',
+			src: '/images/home/S203.webp',
+			top: -150,
+			left: 650
+		},
+		{
+			class:
+				'shadow-glow-gray hover:shadow-glow-blue absolute w-[500px] -rotate-12 rounded-3xl opacity-30 transition-opacity duration-500 hover:opacity-100',
+			src: '/images/home/S204.webp',
+			top: 300,
+			left: 280
+		},
+		{
+			class:
+				'shadow-glow-gray hover:shadow-glow-blue absolute w-[220px] rotate-6 rounded-3xl opacity-30 transition-opacity duration-500 hover:opacity-100',
+			src: '/images/home/S205.webp',
+			top: 200,
+			left: -100
+		}
+	];
+
+	const maxScroll = 1000;
+
+	function lerp(start: number, end: number, t: number) {
+		return start + (end - start) * t;
+	}
 </script>
 
 <svelte:head>
 	<title>Home • SVYEP</title>
 </svelte:head>
 
+<svelte:window bind:scrollY={firstScroll as number} />
+
 <StarsBackground starDensity={0.00003} class="fixed -z-10" />
 <main class="relative h-full">
 	<Spotlight />
 	<div class="my-[100px] flex flex-wrap items-center justify-center">
 		<div class="h-[750px] w-[800px]">
-			<DotLottieSvelte src="/animation.json" autoplay segment={[0, 209]} />
+			<!-- <DotLottieSvelte src="/animation.json" autoplay segment={[0, 209]} /> -->
 		</div>
 		<div class="mt-15 mr-36 -ml-16 flex w-fit flex-col items-center justify-center gap-12">
 			<h1
@@ -43,7 +99,10 @@
 		class="absolute -right-[500px] -z-20 h-full w-[800px] rounded-full bg-radial from-[#18153b]
 		to-zinc-950 to-75% blur-3xl"
 	></div>
-	<div class="flex items-center gap-8">
+	<div
+		class="flex items-center gap-8"
+		style="transform: translateX({Math.max(1000 - 2 * (firstScroll ?? 0), 0)}px)"
+	>
 		<div class="text-right">
 			<h1
 				class="text-shadow-glow-white flex w-[450px] text-[10rem] leading-32 font-black tracking-tighter text-white"
@@ -63,7 +122,10 @@
 			their business journey.
 		</p>
 	</div>
-	<div class="flex flex-col gap-4">
+	<div
+		class="flex flex-col gap-4"
+		style="transform: translateX({Math.min(-1000 + 2 * (secondScroll ?? 0), 0)}px)"
+	>
 		<h1
 			class="text-shadow-glow-white flex text-[10rem] leading-32 font-black tracking-tighter text-white"
 		>
@@ -87,7 +149,10 @@
 			</p>
 		</div>
 	</div>
-	<div class="flex flex-col items-center gap-4">
+	<div
+		class="flex flex-col items-center gap-4"
+		style="transform: translateX({Math.max(1000 - 2 * (thirdScroll ?? 0), 0)}px)"
+	>
 		<div class="flex gap-4">
 			<h1 class="flex w-[550px] text-[10rem] leading-32 font-black tracking-tighter text-white">
 				<AnimateNumber value={home.statistics.impacted_students} />+
@@ -108,7 +173,10 @@
 			of attendees, 350+ VCs, and 100+ investors.
 		</p>
 	</div>
-	<div class="flex items-center gap-8">
+	<div
+		class="flex items-center gap-8"
+		style="transform: translateX({Math.min(-1000 + 2 * (fourthScroll ?? 0), 0)}px)"
+	>
 		<p class="w-[500px] text-right text-gray-400">
 			<span class="text-white"
 				>We connect students with impactful <span class="bg-indigo-700 font-serif text-white italic"
@@ -127,7 +195,10 @@
 			</h2>
 		</div>
 	</div>
-	<div class="flex flex-col">
+	<div
+		class="flex flex-col"
+		style="transform: translateX({Math.max(1000 - 2 * (fifthScoll ?? 0), 0)}px)"
+	>
 		<div class="flex items-center gap-8">
 			<h1 class="flex w-[250px] text-[10rem] leading-32 font-black tracking-tighter text-white">
 				<AnimateNumber value={home.statistics.businesses_worked_with} />+
@@ -169,7 +240,18 @@
 		</h1>
 		<Button variant="secondary" href="/about" class="z-10">Learn about us</Button>
 		<div>
-			<img
+			{#each images as img}
+				<img
+					src={img.src}
+					alt=""
+					class={img.class}
+					style="
+				top: {lerp(0, img.top, Math.min(imageScroll / maxScroll, 1))}px;
+				left: {lerp(0, img.left, Math.min(imageScroll / maxScroll, 1))}px;
+			"
+				/>
+			{/each}
+			<!-- <img
 				src="/images/home/S201.webp"
 				alt=""
 				class="shadow-glow-gray hover:shadow-glow-blue absolute -top-[200px] -left-[250px] w-[250px] -rotate-12 rounded-3xl opacity-30 transition-all duration-500 hover:opacity-100"
@@ -193,7 +275,7 @@
 				src="/images/home/S205.webp"
 				alt=""
 				class="shadow-glow-gray hover:shadow-glow-blue absolute top-[200px] -left-[100px] w-[220px] rotate-6 rounded-3xl opacity-30 transition-all duration-500 hover:opacity-100"
-			/>
+			/> -->
 		</div>
 	</div>
 </section>

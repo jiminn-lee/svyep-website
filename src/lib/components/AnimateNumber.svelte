@@ -15,7 +15,7 @@
 
 		animationController = animate(0, value, {
 			duration: 2,
-			ease: 'easeOut',
+			ease: 'circOut',
 			onUpdate(latest) {
 				if (counter) {
 					counter.textContent = Math.round(latest).toLocaleString();
