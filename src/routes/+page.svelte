@@ -180,7 +180,7 @@
 		style="transform: translateX({Math.max(1000 - 2 * (thirdScroll ?? 0), 0)}px)"
 	>
 		<div class="flex gap-4">
-			<h1 class="flex w-[550px] text-[10rem] leading-32 font-black tracking-tighter text-white">
+			<h1 class="flex w-[630px] text-[10rem] leading-32 font-black tracking-tighter text-white">
 				<AnimateNumber value={home.statistics.impacted_students} />+
 			</h1>
 			<h2
@@ -322,7 +322,7 @@
 		>
 		<div class="flex gap-6">
 			<AnimateText
-				class="font-serif text-9xl leading-24 tracking-tighter text-white italic underline decoration-indigo-600 decoration-wavy decoration-[5px] underline-offset-8 text-shadow-none"
+				class="font-serif text-9xl leading-24 tracking-tighter text-white italic underline decoration-indigo-600 decoration-[5px] underline-offset-8 text-shadow-none"
 				>your</AnimateText
 			>
 			<AnimateText class="text-center text-9xl leading-24 tracking-tighter text-white"

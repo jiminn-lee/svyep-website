@@ -1,10 +1,10 @@
 const home = {
 	statistics: {
-		members: 1000,
+		members: 1400,
 		raised: 275000,
-		impacted_students: 20000,
+		impacted_students: 155000,
 		internships: 25,
-		businesses_worked_with: 50
+		businesses_worked_with: 60
 	}
 };
 

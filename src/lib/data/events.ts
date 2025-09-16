@@ -19,7 +19,7 @@ const events = {
 			title: 'The Youth Business Venture Challenge',
 			subtitle: '(in partnership with Berkeley Summit House)',
 			description:
-				'LIVE NOW! A global pitch competition for high school students. Submit your proposal for a chance to win over $10,000 in prize money and a chance to pitch live at Stanford on September 28th.',
+				'LIVE NOW! A global pitch competition for high school students. Submit your proposal for a chance to win over $10,000 in prize money and a chance to pitch live at Stanford on September 28th. Visit ybvchallenge.org to learn more!',
 			thumbnail: 'images/events/featured/thumbnail.webp',
 			video: 'https://drive.google.com/file/d/1JimBjldxlsyK5QZZoebvYjo1qKg8dm0s/preview'
 		},
@@ -58,3 +58,5 @@ const events = {
 };
 
 export default events;
+
+// link to article
