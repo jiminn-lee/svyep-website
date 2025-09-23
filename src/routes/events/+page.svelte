@@ -8,6 +8,10 @@
 	let eventsContainer = $state() as HTMLElement;
 	let focusedEvent = $state(1);
 
+	let firstEvent = $state() as HTMLElement;
+	let secondEvent = $state() as HTMLElement;
+	let thirdEvent = $state() as HTMLElement;
+
 	$effect(() => {
 		if (focusedEvent === 0) eventsContainer.style.left = '500px';
 		else if (focusedEvent === 1) eventsContainer.style.left = '0px';
@@ -19,13 +23,13 @@
 	<title>Events • SVYEP</title>
 </svelte:head>
 
-<div class="relative flex flex-col items-center gap-10 pt-40">
+<div class="relative flex flex-col items-center gap-10 pt-30 sm:pt-40">
 	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
 	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<div class="relative flex items-center" bind:this={eventsContainer}>
 		<button
 			class={cn(
-				'relative flex h-[650px] w-[500px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500',
+				'relative flex h-[650px] w-[350px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500 sm:w-[500px]',
 				focusedEvent === 1
 					? 'hover:shadow-glow-blue-hover left-10 scale-70 skew-y-6 opacity-30'
 					: focusedEvent === 2
@@ -67,7 +71,7 @@
 		</button>
 		<button
 			class={cn(
-				'relative flex h-[650px] w-[500px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500',
+				'relative flex h-[650px] w-[350px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500 sm:w-[500px]',
 				focusedEvent === 0
 					? 'hover:shadow-glow-blue-hover right-10 scale-70 -skew-y-6 opacity-30'
 					: focusedEvent === 2
@@ -109,7 +113,7 @@
 		</button>
 		<button
 			class={cn(
-				'relative flex h-[650px] w-[500px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500',
+				'relative flex h-[650px] w-[350px] scale-0 flex-col rounded-3xl border-2 border-white/50 bg-gray-800 transition duration-500 sm:w-[500px]',
 				focusedEvent === 1
 					? 'hover:shadow-glow-blue-hover right-10 scale-70 -skew-y-6 opacity-30'
 					: focusedEvent === 0
@@ -190,7 +194,7 @@
 					<img
 						src={event.thumbnail}
 						alt={event.title}
-						class="hover:shadow-glow-blue-hover h-[300px] rounded-3xl outline-1 outline-indigo-600 transition"
+						class="hover:shadow-glow-blue-hover h-[300px] w-auto rounded-3xl outline-1 outline-indigo-600 transition"
 					/>
 				{/if}
 			</div>

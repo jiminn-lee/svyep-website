@@ -29,7 +29,7 @@
 <div class="relative flex flex-col items-center pt-40">
 	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
 	<StarsBackground starDensity={0.00003} class="-z-10" />
-	<h1 class="text-shadow-glow-white text-center text-8xl tracking-tighter text-white">
+	<h1 class="text-shadow-glow-white text-center text-6xl tracking-tighter text-white sm:text-8xl">
 		<span class="text-shadow-glow-blue font-bold text-indigo-600">PARTNER</span> with us.
 	</h1>
 	<Button
@@ -66,11 +66,11 @@
 	{/if}
 	<div class="my-10 flex flex-col items-center gap-4">
 		<h1
-			class="mb-4 font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-[5px] underline-offset-8"
+			class="mb-4 max-w-full font-serif text-6xl font-medium tracking-tighter text-white underline decoration-indigo-600 decoration-[5px] underline-offset-8"
 		>
 			Companies & Organizations
 		</h1>
-		<p class="text-md mb-4 w-[900px] text-center text-gray-400">
+		<p class="text-md mb-4 max-w-[900px] text-center text-gray-400">
 			The following companies and organizations are ones SVYEP has had the privilege of engaging
 			with in a variety of ways, including partnering with them to co-host events, featuring their
 			founders and leaders in interviews and Zoom webinars, and participation of their

@@ -48,14 +48,20 @@
 <div class="relative flex flex-col items-center justify-center pt-40">
 	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
 	<StarsBackground starDensity={0.00003} class="-z-10" />
-	<h2 class="flex items-center gap-1 text-gray-400">
-		<MouseScroll size={20} /> Drag to move around<span class="mx-2"></span>
-		<HandPointing /> Hover & click on starred locations
+	<h2 class="flex flex-wrap items-center justify-center gap-1 text-gray-400">
+		<div class="flex items-center gap-1">
+			<MouseScroll size={20} /> Drag to move around<span class="mx-2"></span>
+		</div>
+		<div class="flex items-center gap-1">
+			<HandPointing /> Hover & click on starred locations
+		</div>
 	</h2>
-	<h1 class="text-shadow-glow-white text-9xl tracking-tighter text-white select-none">
+	<h1
+		class="text-shadow-glow-white sm:y-10 my-10 text-center text-7xl leading-16 tracking-tighter text-white select-none sm:text-9xl sm:leading-24"
+	>
 		SVYEP is <span class="text-shadow-glow-blue font-serif text-indigo-600 italic">global.</span>
 	</h1>
-	<h2 class="-mb-4 text-4xl font-medium tracking-tighter text-white">
+	<h2 class="-mb-4 text-2xl font-medium tracking-tighter text-white sm:text-4xl">
 		<span class="font-serif text-5xl text-indigo-600">18</span> states,
 		<span class="font-serif text-5xl text-indigo-600">9</span> countries
 	</h2>

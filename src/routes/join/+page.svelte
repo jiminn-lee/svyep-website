@@ -12,17 +12,23 @@
 <div class="relative flex flex-col items-center pt-30 sm:pt-40">
 	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
 	<StarsBackground starDensity={0.00003} class="-z-10" />
-	<img src="/images/join/01.webp" alt="" class=" fixed -top-40 -z-10 opacity-20" />
+	<img
+		src="/images/join/01.webp"
+		alt=""
+		class="fixed -z-10 -mt-60 h-[120lvh] w-lvw object-cover opacity-20"
+	/>
 	<div class="flex flex-col items-center">
-		<h1 class="text-shadow-glow-white text-center text-8xl tracking-tighter text-white">
+		<h1 class="text-shadow-glow-white text-center text-6xl tracking-tighter text-white sm:text-8xl">
 			Join us as a member <span class="text-shadow-glow-blue font-bold text-indigo-600">TODAY.</span
 			>
 		</h1>
-		<h2 class="font-serif text-2xl tracking-tighter text-gray-400">
+		<h2
+			class="max-w-[1000px] text-center font-serif text-lg tracking-tighter text-gray-400 sm:text-2xl"
+		>
 			As a member, students will receive <span class="text-white">exclusive</span> resources and opportunities
 			only available to them.
 		</h2>
-		<div class="mt-10 flex gap-4">
+		<div class="mt-10 flex flex-wrap justify-center gap-4">
 			<div
 				class="shadow-glow-gray z-10 flex w-[300px] flex-col items-center justify-center gap-2 rounded-3xl border-2 border-white/5 bg-gray-800/80 p-6 text-white transition-all hover:border-white/50 hover:bg-gray-700"
 			>
@@ -45,7 +51,7 @@
 			</div>
 		</div>
 		<iframe
-			class="mt-10 opacity-90"
+			class="mt-10 w-full opacity-90 sm:w-[840px]"
 			title="SVYEP Student Enrollment Form"
 			src="https://docs.google.com/forms/d/e/1FAIpQLSdVHSnd4eaIjKbw_QWfNovNRG-3hE2OLGkIgTciSEA3MnJJew/viewform?embedded=true"
 			width="840"
