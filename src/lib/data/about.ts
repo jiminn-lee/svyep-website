@@ -67,7 +67,7 @@ const about = {
 		},
 		{
 			name: 'Jeremy Peng',
-			position: 'Asstant Coach',
+			position: 'Co-Founder and Asstant Coach',
 			description:
 				'Jeremy is a freshman at The University of Chicago. He keenly enjoys the vitality of business, which he believes he can harness through his skills in writing and critical thinking. Jeremy wants to become an effective leader for SVYEP on its mission to guide youth into the professional world.',
 			image: '/images/about/jeremy-peng.webp'

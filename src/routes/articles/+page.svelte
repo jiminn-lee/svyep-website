@@ -17,7 +17,7 @@
 	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<div class="flex flex-col items-center gap-4">
 		<h1
-			class="font-articles text-shadow-glow-white w-full text-center text-4xl font-medium text-wrap sm:text-6xl lg:text-8xl"
+			class="font-articles text-shadow-glow-white w-full text-center text-4xl font-medium text-wrap sm:text-6xl lg:text-7xl"
 		>
 			The SVYEP Chronicle
 		</h1>
@@ -73,7 +73,9 @@
 						<div class="flex font-serif text-xl font-semibold text-indigo-600">
 							{article.metadata.type}
 						</div>
-						<h1 class="font-serif text-5xl font-semibold transition group-hover:text-indigo-600">
+						<h1
+							class="font-serif text-5xl font-semibold text-white transition group-hover:text-indigo-600"
+						>
 							{article.metadata.title}
 						</h1>
 						<div class="mt-1 flex justify-between font-sans text-lg font-normal text-gray-400">
@@ -81,15 +83,8 @@
 							<h3 class=" text-gray-400">
 								{article.metadata.wordcount / 255 >= 1
 									? `${Math.round(article.metadata.wordcount / 255)} minute read`
-									: `${Math.round((article.metadata.wordcount / 255) * 60)} second read`}
+									: `1 minute read`}
 							</h3>
-							<!-- <p>
-								{new Date('2024-02-14').toLocaleDateString('en-us', {
-									year: 'numeric',
-									month: 'long',
-									day: 'numeric'
-								})}
-							</p> -->
 						</div>
 						<h2 class="mt-2">{article.metadata.subtitle}</h2>
 					</a>
@@ -106,5 +101,3 @@
 		{/each}
 	</div>
 </div>
-
-<!-- no seconds, keep it to 1 minute!! -->

@@ -71,7 +71,7 @@
 <main class="relative h-full">
 	<Spotlight />
 	<div
-		class="my-[20px] flex flex-col flex-wrap justify-center sm:items-center xl:my-[100px] xl:flex-row"
+		class="my-[100px] flex flex-col flex-wrap items-center justify-center xl:my-[120px] xl:flex-row"
 	>
 		<div
 			class="mx-auto h-[400px] w-[400px] sm:mx-0 sm:h-[600px] sm:w-[600px] xl:h-[700px] xl:w-[700px]"
@@ -79,7 +79,7 @@
 			<DotLottieSvelte src="/animation.json" autoplay segment={[0, 209]} />
 		</div>
 		<div
-			class="-mt-10 mb-20 ml-10 flex w-fit flex-col items-start justify-center gap-12 sm:-mt-20 sm:items-center xl:mt-20 xl:mr-36 xl:-ml-16"
+			class="-mt-10 mb-20 flex w-fit flex-col items-center justify-center gap-12 sm:-mt-20 sm:ml-10 xl:mt-20 xl:mr-36 xl:-ml-16"
 		>
 			<div class="flex flex-col items-start sm:items-center xl:items-end">
 				<!-- <h1
@@ -171,7 +171,7 @@
 			<p class="max-w-[500px] px-2 text-center text-sm text-gray-400 sm:text-base lg:text-left">
 				<span class="text-white"
 					>We've <span class="bg-indigo-700 font-serif text-white italic">raised</span>
-					{home.statistics.raised} through investors and partnerships, demonstrating the strength and
+					${home.statistics.raised} through investors and partnerships, demonstrating the strength and
 					trust of our growing network.</span
 				> This level of backing and funding reflects the confidence our partners have in our mission
 				and the value we deliver. It shows that our community believes in what we're building and the
@@ -240,7 +240,7 @@
 			>
 				<AnimateNumber value={home.statistics.businesses_worked_with} />+
 			</h1>
-			<p class="hidden max-w-[500px] px-2 text-sm text-gray-400 sm:block lg:text-base">
+			<p class="hidden max-w-[500px] px-2 text-sm text-gray-400 lg:block lg:text-base">
 				<span class="text-white"
 					>We are committed to <span class="bg-indigo-700 font-serif text-white italic"
 						>partnering</span
@@ -252,12 +252,12 @@
 			</p>
 		</div>
 		<h2
-			class="font-serif text-5xl font-semibold tracking-tighter text-indigo-600 italic lg:text-7xl"
+			class="text-center font-serif text-5xl font-semibold tracking-tighter text-indigo-600 italic lg:text-7xl"
 		>
 			businesses worked with.
 		</h2>
 		<p
-			class="visible mt-8 max-w-[500px] px-2 text-center text-sm text-gray-400 sm:invisible lg:text-base"
+			class="visible mt-8 max-w-[500px] px-2 text-center text-sm text-gray-400 lg:invisible lg:text-base"
 		>
 			<span class="text-white"
 				>We are committed to <span class="bg-indigo-700 font-serif text-white italic"

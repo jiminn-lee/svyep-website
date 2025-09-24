@@ -8,14 +8,20 @@
 	let eventsContainer = $state() as HTMLElement;
 	let focusedEvent = $state(1);
 
-	let firstEvent = $state() as HTMLElement;
-	let secondEvent = $state() as HTMLElement;
-	let thirdEvent = $state() as HTMLElement;
+	let screenWidth = $state(window.screen.width);
 
 	$effect(() => {
-		if (focusedEvent === 0) eventsContainer.style.left = '500px';
-		else if (focusedEvent === 1) eventsContainer.style.left = '0px';
-		else if (focusedEvent === 2) eventsContainer.style.left = '-500px';
+		if (window.screen.width <= 640) {
+			eventsContainer.style.left = '0px';
+			if (focusedEvent === 0) eventsContainer.style.left = '350px';
+			else if (focusedEvent === 1) eventsContainer.style.left = '0px';
+			else if (focusedEvent === 2) eventsContainer.style.left = '-350px';
+		} else {
+			eventsContainer.style.left = '0px';
+			if (focusedEvent === 0) eventsContainer.style.left = '500px';
+			else if (focusedEvent === 1) eventsContainer.style.left = '0px';
+			else if (focusedEvent === 2) eventsContainer.style.left = '-500px';
+		}
 	});
 </script>
 

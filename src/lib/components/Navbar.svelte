@@ -5,6 +5,7 @@
 	import X from 'phosphor-svelte/lib/X';
 
 	let isMenuOpen = $state(false);
+	let isMobileMenuOpen = $state(false);
 </script>
 
 <header class="flex w-full justify-center">
@@ -51,36 +52,136 @@
 			>
 			<div
 				class={cn(
-					'shadow-glow-blue/5 absolute top-[70px] right-6  flex items-center rounded-2xl border-2 border-white/5 bg-indigo-400/50 p-8 text-white backdrop-blur-xl transition-opacity xl:hidden',
+					'shadow-glow-blue/5 absolute top-[70px] right-6  flex items-center rounded-2xl border-2 border-white/5 bg-gray-900 p-8 text-white backdrop-blur-xl transition-opacity xl:hidden',
 					`${isMenuOpen ? 'block' : 'hidden'}`
 				)}
 			>
 				<div class="flex w-full flex-col gap-4 text-center text-gray-400">
-					<a href="/about" class="hover:text-shadow-glow-white transition hover:text-white"
-						>About Us</a
+					<a
+						href="/about"
+						class="hover:text-shadow-glow-white transition hover:text-white"
+						onclick={() => {
+							isMenuOpen = false;
+						}}>About Us</a
 					>
-					<a href="/impact" class="hover:text-shadow-glow-white transition hover:text-white"
-						>Impact</a
+					<a
+						href="/impact"
+						class="hover:text-shadow-glow-white transition hover:text-white"
+						onclick={() => {
+							isMenuOpen = false;
+						}}>Impact</a
 					>
-					<a href="/events" class="hover:text-shadow-glow-white transition hover:text-white"
-						>Events</a
+					<a
+						href="/events"
+						class="hover:text-shadow-glow-white transition hover:text-white"
+						onclick={() => {
+							isMenuOpen = false;
+						}}>Events</a
 					>
-					<a href="/articles" class="hover:text-shadow-glow-white transition hover:text-white"
-						>Articles</a
+					<a
+						href="/articles"
+						class="hover:text-shadow-glow-white transition hover:text-white"
+						onclick={() => {
+							isMenuOpen = false;
+						}}>Articles</a
 					>
 					<!-- <a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white"
 						>Merch</a
 					> -->
-					<a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white"
-						>Donate</a
+					<a
+						href="/donate"
+						class="hover:text-shadow-glow-white transition hover:text-white"
+						onclick={() => {
+							isMenuOpen = false;
+						}}>Donate</a
 					>
 				</div>
 			</div>
 		</div>
 	</nav>
 </header>
-<header class="flex w-full justify-end">
-	<Button class="fixed z-10 m-8 block sm:hidden" size="icon">
-		<List size={32} />
-	</Button>
+
+<header class="flex w-full">
+	<nav class="fixed z-50 w-full">
+		<Button
+			class="fixed right-0 z-10 m-8 block sm:hidden"
+			size="icon"
+			onclick={() => {
+				isMobileMenuOpen = !isMobileMenuOpen;
+			}}
+		>
+			{#if !isMobileMenuOpen}
+				<List size={32} />
+			{:else}
+				<X size={32} />
+			{/if}</Button
+		>
+		<div
+			class={cn(
+				'shadow-glow-blue/5 absolute top-[100px] right-8 flex items-center rounded-2xl border-2 border-white/5 bg-gray-900 p-8 text-white backdrop-blur-xl transition-opacity sm:hidden',
+				`${isMobileMenuOpen ? 'block' : 'hidden'}`
+			)}
+		>
+			<div class="flex w-full flex-col items-center gap-4 text-center text-gray-400">
+				<a
+					href="/"
+					class="hover:text-shadow-glow-white transition hover:text-white"
+					onclick={() => {
+						isMobileMenuOpen = false;
+					}}>Home</a
+				>
+				<a
+					href="/about"
+					class="hover:text-shadow-glow-white transition hover:text-white"
+					onclick={() => {
+						isMobileMenuOpen = false;
+					}}>About Us</a
+				>
+				<a
+					href="/impact"
+					class="hover:text-shadow-glow-white transition hover:text-white"
+					onclick={() => {
+						isMobileMenuOpen = false;
+					}}>Impact</a
+				>
+				<a
+					href="/events"
+					class="hover:text-shadow-glow-white transition hover:text-white"
+					onclick={() => {
+						isMobileMenuOpen = false;
+					}}>Events</a
+				>
+				<a
+					href="/articles"
+					class="hover:text-shadow-glow-white transition hover:text-white"
+					onclick={() => {
+						isMobileMenuOpen = false;
+					}}>Articles</a
+				>
+				<!-- <a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white"
+					>Merch</a
+					> -->
+				<a
+					href="/donate"
+					class="hover:text-shadow-glow-white transition hover:text-white"
+					onclick={() => {
+						isMobileMenuOpen = false;
+					}}>Donate</a
+				>
+				<Button
+					variant="secondary"
+					href="/partner"
+					onclick={() => {
+						isMobileMenuOpen = false;
+					}}>Partner</Button
+				>
+				<Button
+					href="/join"
+					onclick={() => {
+						isMobileMenuOpen = false;
+					}}>Join</Button
+				>
+			</div>
+		</div>
+	</nav>
 </header>

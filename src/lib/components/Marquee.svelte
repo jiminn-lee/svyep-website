@@ -8,13 +8,6 @@
 		class: className,
 		children
 	} = $props();
-	// export let pauseOnHover = false;
-	// export let vertical = false;
-	// export let repeat = 4;
-	// export let reverse = false;
-
-	// let className = '';
-	// export { className as class };
 </script>
 
 <div

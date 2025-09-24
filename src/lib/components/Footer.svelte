@@ -45,11 +45,11 @@
 				<a href="/articles" class="hover:text-shadow-glow-white transition hover:text-white"
 					>Articles</a
 				>
-				<a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white">Merch</a>
-			</div>
-			<div class="flex flex-col items-center gap-2">
+				<!-- <a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white">Merch</a> -->
 				<a href="/donate" class="hover:text-shadow-glow-white transition hover:text-white">Donate</a
 				>
+			</div>
+			<div class="flex flex-col items-center gap-2">
 				<a href="/partner" class="hover:text-shadow-glow-white transition hover:text-white"
 					>Partner</a
 				>

@@ -25,7 +25,7 @@
 		youth entrepreneurs and giving them the opportunities they need to succeed.
 	</p>
 	<h1
-		class="mt-40 flex text-[6rem] leading-32 font-black tracking-tighter text-white sm:text-[10rem]"
+		class="mt-40 flex text-[5rem] leading-16 font-black tracking-tighter text-white sm:text-[10rem] sm:leading-30"
 	>
 		$<AnimateNumber value={donate.amount_raised} />+
 	</h1>
@@ -35,5 +35,11 @@
 	>
 		raised.
 	</h2>
-	<Button size="lg" class="mt-10">Donate now</Button>
+	<Button
+		size="lg"
+		class="mt-10"
+		target="_blank"
+		href="https://enroll.zellepay.com/qr-codes/?data=eyJuYW1lIjoiRURVQ0FUT1JTIEZPUiBJTVBBQ1QiLCJ0b2tlbiI6IjQwOC0yMTAtMjAyNCIsImFjdGlvbiI6InBheW1lbnQifQ"
+		>Donate now</Button
+	>
 </div>
