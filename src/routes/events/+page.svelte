@@ -210,3 +210,6 @@
 </div>
 
 <!-- make cards larger, especially middle, text for events larger -->
+<!-- link to article -->
+<!-- walk through changing numbers homescreen, update locations -->
+<!-- change order of logos, articles with images -->
