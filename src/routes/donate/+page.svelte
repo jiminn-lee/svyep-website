@@ -2,7 +2,7 @@
 	import AnimateNumber from '$lib/components/AnimateNumber.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import StarsBackground from '$lib/components/StarsBackground.svelte';
-	import donate from '$lib/data/donate';
+	import home from '$lib/data/home';
 </script>
 
 <svelte:head>
@@ -27,7 +27,7 @@
 	<h1
 		class="mt-40 flex text-[5rem] leading-16 font-black tracking-tighter text-white sm:text-[10rem] sm:leading-30"
 	>
-		$<AnimateNumber value={donate.amount_raised} />+
+		$<AnimateNumber value={home.statistics.raised} />+
 	</h1>
 	<h2
 		class="font-serif text-5xl font-medium tracking-tighter text-indigo-600 italic sm:text-7xl

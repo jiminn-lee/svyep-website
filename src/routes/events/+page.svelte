@@ -8,7 +8,7 @@
 	let eventsContainer = $state() as HTMLElement;
 	let focusedEvent = $state(1);
 
-	let screenWidth = $state(window.screen.width);
+	// let screenWidth = $state(window.screen.width);
 
 	$effect(() => {
 		if (window.screen.width <= 640) {
@@ -115,6 +115,11 @@
 				<p class="pt-4 font-light text-gray-400">
 					{events.featured_events[1].description}
 				</p>
+				{#if events.featured_events[1].article}
+					<Button href="/articles/{events.featured_events[1].article}" class="mx-auto mt-4"
+						>Read More</Button
+					>
+				{/if}
 			</div>
 		</button>
 		<button
@@ -191,9 +196,12 @@
 					<h1 class="z-10 mt-2 text-4xl font-semibold tracking-tighter text-white">
 						{event.title}
 					</h1>
-					<p class="pt-4 font-light text-gray-400">
+					<p class="mb-4 pt-4 font-light text-gray-400">
 						{event.description}
 					</p>
+					{#if event.article}
+						<Button href="/articles/{event.article}">Read More</Button>
+					{/if}
 				</div>
 				{#if event.thumbnail}
 					<!-- content here -->
@@ -208,8 +216,3 @@
 		{/each}
 	</div>
 </div>
-
-<!-- make cards larger, especially middle, text for events larger -->
-<!-- link to article -->
-<!-- walk through changing numbers homescreen, update locations -->
-<!-- change order of logos, articles with images -->
