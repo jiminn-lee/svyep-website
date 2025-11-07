@@ -17,7 +17,7 @@ const impact = {
 				'John F. Kennedy High School — Fremont',
 				'BASIS Independent Fremont — Fremont',
 				'Dougherty Valley High School — San Ramon',
-				'San Ramon Valley High School – San Ramon',
+				'San Ramon Valley High School — San Ramon',
 				'Palos Verdes High School — Palos Verdes Estates',
 				'Burbank High School — Burbank',
 				'Irvine High School — Irvine',

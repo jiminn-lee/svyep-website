@@ -156,7 +156,7 @@
 	<img
 		src="/images/home/stats/Members.webp"
 		alt=""
-		class="shadow-glow-blue absolute top-[200px] left-0 -z-50 h-[250px] rotate-[-10deg] rounded-3xl opacity-50 transition-all 2xl:left-36 2xl:opacity-80"
+		class="shadow-glow-blue absolute top-[200px] left-0 -z-50 h-[250px] rotate-[-10deg] rounded-3xl opacity-30 transition-all 2xl:left-36 2xl:opacity-80"
 	/>
 	<div
 		class="flex flex-col items-center gap-1 lg:gap-4"
@@ -188,7 +188,7 @@
 	<img
 		src="/images/home/stats/Money Raised.webp"
 		alt=""
-		class="shadow-glow-blue absolute top-[650px] right-0 -z-50 h-[250px] rotate-[10deg] rounded-3xl opacity-50 transition-all sm:top-[500px] 2xl:right-36 2xl:opacity-80"
+		class="shadow-glow-blue absolute top-[650px] right-0 -z-50 h-[250px] rotate-[10deg] rounded-3xl opacity-30 transition-all sm:top-[500px] 2xl:right-36 2xl:opacity-80"
 	/>
 	<div
 		class="flex flex-col items-center gap-4"
@@ -218,7 +218,7 @@
 	<img
 		src="/images/home/stats/ImpactedStudents.webp"
 		alt=""
-		class="shadow-glow-blue absolute top-[1050px] left-0 -z-50 h-[250px] rotate-[-10deg] rounded-3xl opacity-50 transition-all sm:top-[1000px] 2xl:left-36 2xl:opacity-80"
+		class="shadow-glow-blue absolute top-[1050px] left-0 -z-50 h-[250px] rotate-[-10deg] rounded-3xl opacity-30 transition-all sm:top-[1000px] 2xl:left-36 2xl:opacity-80"
 	/>
 	<div
 		class="flex flex-col-reverse items-center gap-8 lg:flex-row"
@@ -249,7 +249,7 @@
 	<img
 		src="/images/home/stats/Internships.webp"
 		alt=""
-		class="shadow-glow-blue absolute top-[1450px] right-0 -z-50 h-[250px] rotate-[10deg] rounded-3xl opacity-50 transition-all sm:top-[1400px] 2xl:right-36 2xl:opacity-80"
+		class="shadow-glow-blue absolute top-[1450px] right-0 -z-50 h-[250px] rotate-[10deg] rounded-3xl opacity-30 transition-all sm:top-[1400px] 2xl:right-36 2xl:opacity-80"
 	/>
 	<div
 		class="flex flex-col items-center"

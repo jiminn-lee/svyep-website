@@ -62,8 +62,8 @@
 		SVYEP is <span class="text-shadow-glow-blue font-serif text-indigo-600 italic">global.</span>
 	</h1>
 	<h2 class="-mb-4 text-2xl font-medium tracking-tighter text-white sm:text-4xl">
-		<span class="font-serif text-5xl text-indigo-600">18</span> states,
-		<span class="font-serif text-5xl text-indigo-600">9</span> countries
+		<span class="font-serif text-5xl text-indigo-600">21</span> states,
+		<span class="font-serif text-5xl text-indigo-600">17</span> countries
 	</h2>
 	<div bind:this={globeElement}></div>
 	{#if selectedLocation.location}
