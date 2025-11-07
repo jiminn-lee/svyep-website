@@ -7,12 +7,13 @@
 	import StarsBackground from '$lib/components/StarsBackground.svelte';
 	import AnimateNumber from '$lib/components/AnimateNumber.svelte';
 	import AnimateText from '$lib/components/AnimateText.svelte';
+	import Marquee from '$lib/components/Marquee.svelte';
 
 	let firstScroll: number = $state(0);
 	let secondScroll = $derived(firstScroll - 300);
-	let thirdScroll = $derived(secondScroll - 500);
-	let fourthScroll = $derived(thirdScroll - 600);
-	let fifthScoll = $derived(fourthScroll - 400);
+	let thirdScroll = $derived(secondScroll - 400);
+	let fourthScroll = $derived(thirdScroll - 400);
+	let fifthScoll = $derived(fourthScroll - 200);
 
 	let imageScroll = $derived(firstScroll - 1900);
 
@@ -117,14 +118,14 @@
 </main>
 
 <!-- section-1 -->
-<section class="relative mt-40 flex h-full flex-col items-center gap-44 sm:mt-0 sm:gap-52">
+<section class="relative mt-40 flex h-full flex-col items-center gap-44 sm:mt-0 sm:gap-36">
 	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<div
-		class="absolute top-0 -left-[500px] -z-20 h-full w-[800px] rounded-full bg-radial from-[#18153b]
+		class="absolute top-0 -left-[500px] -z-20 h-full w-[700px] rounded-full bg-radial from-[#18153b]
 		to-zinc-950 to-75% blur-3xl"
 	></div>
 	<div
-		class="absolute -right-[500px] -z-20 h-full w-[800px] rounded-full bg-radial from-[#18153b]
+		class="absolute -right-[500px] -z-20 h-full w-[700px] rounded-full bg-radial from-[#18153b]
 		to-zinc-950 to-75% blur-3xl"
 	></div>
 	<div
@@ -152,6 +153,11 @@
 			their business journey.
 		</p>
 	</div>
+	<img
+		src="/images/home/stats/Members.webp"
+		alt=""
+		class="shadow-glow-blue absolute top-[200px] left-0 -z-50 h-[250px] rotate-[-10deg] rounded-3xl opacity-50 transition-all 2xl:left-36 2xl:opacity-80"
+	/>
 	<div
 		class="flex flex-col items-center gap-1 lg:gap-4"
 		style="transform: translateX({Math.min(-1000 + 2 * (secondScroll ?? 0), 0)}px)"
@@ -179,6 +185,11 @@
 			</p>
 		</div>
 	</div>
+	<img
+		src="/images/home/stats/Money Raised.webp"
+		alt=""
+		class="shadow-glow-blue absolute top-[650px] right-0 -z-50 h-[250px] rotate-[10deg] rounded-3xl opacity-50 transition-all sm:top-[500px] 2xl:right-36 2xl:opacity-80"
+	/>
 	<div
 		class="flex flex-col items-center gap-4"
 		style="transform: translateX({Math.max(1000 - 2 * (thirdScroll ?? 0), 0)}px)"
@@ -204,6 +215,11 @@
 			of attendees, 350+ VCs, and 100+ investors.
 		</p>
 	</div>
+	<img
+		src="/images/home/stats/ImpactedStudents.webp"
+		alt=""
+		class="shadow-glow-blue absolute top-[1050px] left-0 -z-50 h-[250px] rotate-[-10deg] rounded-3xl opacity-50 transition-all sm:top-[1000px] 2xl:left-36 2xl:opacity-80"
+	/>
 	<div
 		class="flex flex-col-reverse items-center gap-8 lg:flex-row"
 		style="transform: translateX({Math.min(-1000 + 2 * (fourthScroll ?? 0), 0)}px)"
@@ -230,6 +246,11 @@
 			</h2>
 		</div>
 	</div>
+	<img
+		src="/images/home/stats/Internships.webp"
+		alt=""
+		class="shadow-glow-blue absolute top-[1450px] right-0 -z-50 h-[250px] rotate-[10deg] rounded-3xl opacity-50 transition-all sm:top-[1400px] 2xl:right-36 2xl:opacity-80"
+	/>
 	<div
 		class="flex flex-col items-center"
 		style="transform: translateX({Math.max(1000 - 2 * (fifthScoll ?? 0), 0)}px)"
@@ -332,7 +353,7 @@
 </section>
 
 <!-- section-3 -->
-<section class="relative flex flex-col items-center gap-14">
+<section class="relative flex flex-col items-center gap-8">
 	<StarsBackground starDensity={0.00003} class="-z-10" />
 	<h1
 		class="mb-20 max-w-[1000px] px-2 text-center text-7xl tracking-tighter text-white sm:text-9xl sm:leading-24"
@@ -375,11 +396,9 @@
 			<img
 				src="/images/home/S301.webp"
 				alt=""
-				class="my-4 ml-1 h-auto w-[300px] rounded-3xl sm:my-0"
+				class="my-4 ml-1 h-auto w-[250px] rounded-3xl sm:my-0"
 			/>
-			<ul
-				class="ml-10 w-[300px] list-disc text-lg leading-relaxed text-gray-400 sm:ml-16 sm:text-3xl lg:w-[500px]"
-			>
+			<ul class="ml-10 list-disc text-lg leading-relaxed text-gray-400 sm:ml-16 sm:text-2xl">
 				<li>In-person speaker events</li>
 				<li>Networking sessions</li>
 				<li>Zoom webinars and workshops</li>
@@ -401,9 +420,7 @@
 			</h1>
 		</div>
 		<div class="flex flex-col-reverse items-center sm:-mt-32 sm:flex-row">
-			<ul
-				class="w-[250px] list-disc text-lg leading-relaxed text-gray-400 sm:mr-10 sm:text-3xl lg:w-[500px]"
-			>
+			<ul class="w-[300px] list-disc text-lg leading-relaxed text-gray-400 sm:mr-10 sm:text-2xl">
 				<li>Paid internships & jobs</li>
 				<li>Volunteer opportunities @ local startups in the Silicon Valley</li>
 				<li>Work alongside industry professionals</li>
@@ -411,7 +428,7 @@
 			<img
 				src="/images/home/S302.webp"
 				alt=""
-				class="my-4 h-auto w-[300px] rounded-3xl sm:my-0 sm:mr-1"
+				class="my-4 h-auto w-[250px] rounded-3xl sm:my-0 sm:mr-1"
 			/>
 		</div>
 	</div>
@@ -423,9 +440,9 @@
 			03
 		</h1>
 		<h2 class="font-serif text-4xl font-semibold text-indigo-600 sm:text-6xl">EDUCATION</h2>
-		<img src="/images/home/S303.webp" alt="" class=" h-auto w-[300px] rounded-3xl sm:w-[500px]" />
+		<img src="/images/home/S303.webp" alt="" class=" h-auto w-[300px] rounded-3xl sm:w-[400px]" />
 		<ul
-			class="mt-10 w-[300px] list-disc text-lg leading-relaxed text-gray-400 sm:w-[500px] sm:text-3xl"
+			class="mt-10 w-[300px] list-disc text-lg leading-relaxed text-gray-400 sm:w-[500px] sm:text-2xl"
 		>
 			<li>Engage with mentions & peers in student-led workshops</li>
 			<li>Access our nationwide network of schools</li>
@@ -435,10 +452,28 @@
 
 <!-- section-4 -->
 <section class="relative my-32 flex flex-col items-center gap-12">
+	<Marquee class="mb-10 [--duration:60s]">
+		{#each new Array(8) as item, i}
+			<img
+				src="/images/home/top-carousel/{i}.webp"
+				alt=""
+				class=" h-[300px] rounded-3xl select-none"
+			/>
+		{/each}
+	</Marquee>
 	<h1
 		class=" text-shadow-glow-white text-center text-7xl tracking-tighter text-white sm:text-9xl sm:leading-24"
 	>
 		Get started <span class="text-shadow-glow-blue font-bold text-indigo-600">TODAY.</span>
 	</h1>
 	<Button href="/join" size="lg">Join Us</Button>
+	<Marquee class="mt-10 [--duration:60s]" reverse={true}>
+		{#each new Array(7) as item, i}
+			<img
+				src="/images/home/bottom-carousel/{i}.webp"
+				alt=""
+				class=" h-[300px] rounded-3xl select-none"
+			/>
+		{/each}
+	</Marquee>
 </section>

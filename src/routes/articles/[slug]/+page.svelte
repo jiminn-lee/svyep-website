@@ -8,7 +8,7 @@
 
 <StarsBackground class="-z-10" starDensity={0.00003} />
 <article
-	class="prose prose-lg prose-h1:font-serif prose-zinc dark:prose-invert mr-auto mb-32 ml-auto min-h-screen max-w-[900px] px-8 pt-40"
+	class="prose prose-lg prose-h1:font-serif prose-zinc dark:prose-invert mr-auto mb-32 ml-auto min-h-screen max-w-[900px] px-8 pt-40 text-white"
 >
 	<a
 		href="/articles"
@@ -18,7 +18,7 @@
 	<div class="flex font-serif text-2xl font-semibold text-indigo-600">
 		{metadata.type}
 	</div>
-	<h1>
+	<h1 class="text-white">
 		{metadata.title}
 		<div class="flex justify-between font-sans text-lg font-normal text-gray-400">
 			<p>By {metadata.author}</p>
