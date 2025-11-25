@@ -4,7 +4,7 @@ const impact = {
 			location: 'California',
 			lat: '36.44820697000031',
 			lng: '-119.42799489020969',
-			number_of_schools: 51,
+			number_of_schools: 61,
 			schools: [
 				'California Crosspoint Academy — Hayward',
 				'Moreau Catholic High School — Hayward',
@@ -56,8 +56,25 @@ const impact = {
 				'Saratoga High School — Saratoga',
 				'Castilleja School — Palo Alto',
 				'Palo Alto High School — Palo Alto',
-				'University High School — San Francisco'
+				'University High School — San Francisco',
+				'American High School, Fremont',
+				'Aragon High School, San Mateo',
+				'California High School, San Ramon',
+				'Foothill High School, Pleasanton',
+				'Heritage High School, Brentwood',
+				'Monta Vista High School, Cupertino',
+				'Mountain House High School, Mountain House',
+				'Santa Clara High School, Santa Clara',
+				'Silver Creek High School, San Jose',
+				'Washington High School, Fremont'
 			]
+		},
+		{
+			location: 'Arizona',
+			lat: '34.34411290955422',
+			lng: '-111.73033161250532',
+			number_of_schools: 1,
+			schools: ['ASU Preparatory Academy Digital, Tempe']
 		},
 		{
 			location: 'Utah',
@@ -169,13 +186,15 @@ const impact = {
 			location: 'Colorado',
 			lat: '39.3045148868801',
 			lng: '-105.84708517891858',
-			number_of_schools: 5,
+			number_of_schools: 7,
 			schools: [
 				'Cherry Creek High School — Greenwood Village',
 				'Fairview High School — Boulder',
 				'Denver East High School — Denver',
 				'Regis Jesuit High School — Aurora',
-				'Valor Christian High School — Highlands Ranch'
+				'Valor Christian High School — Highlands Ranch',
+				'Arapahoe High School — Centennial',
+				'Mead High School — Longmont'
 			]
 		},
 		{
@@ -327,6 +346,66 @@ const impact = {
 			lng: '-2.7824796457660383',
 			number_of_schools: 2,
 			schools: ['Eton College — Windsor', 'Harrow School — London']
+		},
+		{
+			location: 'Michigan',
+			lat: '45.0617',
+			lng: '-84.9383',
+			number_of_schools: 3,
+			schools: [
+				'Detroit County Day School — Beverly Hills',
+				'Cranbrook Kingswood Upper School — Bloomfield Hills',
+				'Troy High School — Troy'
+			]
+		},
+		{
+			location: 'India',
+			lat: '20.5937',
+			lng: '78.9629',
+			number_of_schools: 1,
+			schools: ['Allenhouse Public School — Kanpur']
+		},
+		{
+			location: 'Vietnam',
+			lat: '14.0583',
+			lng: '108.2772',
+			number_of_schools: 1,
+			schools: ['Dewey International School of Applied Science — Hanoi']
+		},
+		{
+			location: 'Pakistan',
+			lat: '30.0000',
+			lng: '70.0000',
+			number_of_schools: 1,
+			schools: ['Kalar International School — Pakistan']
+		},
+		{
+			location: 'Ghana',
+			lat: '7.9465',
+			lng: '-1.0232',
+			number_of_schools: 1,
+			schools: ['The Roman Ridge School — Accra']
+		},
+		{
+			location: 'Canada',
+			lat: '56.1304',
+			lng: '-106.3468',
+			number_of_schools: 1,
+			schools: ['Upper Canada College — Toronto']
+		},
+		{
+			location: 'Iraq',
+			lat: '33.2237',
+			lng: '43.6859',
+			number_of_schools: 1,
+			schools: ['Kalar International School — Kurdistan']
+		},
+		{
+			location: 'Cameroon',
+			lat: '7.3653',
+			lng: '12.3434',
+			number_of_schools: 1,
+			schools: ['Dewey International School of Applied Science — Douala']
 		}
 	]
 };

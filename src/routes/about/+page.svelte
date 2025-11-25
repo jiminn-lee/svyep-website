@@ -49,6 +49,11 @@
 			{/each}
 		</div>
 	</div>
+	<img
+		src="/images/about/teamphoto.webp"
+		alt=""
+		class="shadow-glow-blue hover:shadow-glow-blue-hover w-[1000px] rounded-3xl transition-all"
+	/>
 	<div class="mb-32 flex h-full w-10/12 flex-col items-center text-white">
 		<h1 class="font-serif text-6xl tracking-tighter sm:text-9xl">
 			Advisors<span class="text-indigo-600">.</span>

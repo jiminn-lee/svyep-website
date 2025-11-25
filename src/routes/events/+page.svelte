@@ -32,6 +32,11 @@
 <div class="relative flex flex-col items-center gap-10 pt-30 sm:pt-40">
 	<StarsBackground class="fixed -z-10" starDensity={0.00003} />
 	<StarsBackground starDensity={0.00003} class="-z-10" />
+	<h1
+		class="text-shadow-glow-white text-center text-7xl tracking-tighter text-white select-none sm:text-9xl"
+	>
+		Top 5 <span class="text-shadow-glow-blue font-serif text-indigo-600 italic">SVYEP</span> Events
+	</h1>
 	<div class="relative flex items-center" bind:this={eventsContainer}>
 		<button
 			class={cn(
@@ -73,6 +78,11 @@
 				<p class="pt-4 font-light text-gray-400">
 					{events.featured_events[0].description}
 				</p>
+				{#if events.featured_events[0].article}
+					<Button href="/articles/{events.featured_events[0].article}" class="mx-auto mt-4"
+						>Read More</Button
+					>
+				{/if}
 			</div>
 		</button>
 		<button
@@ -115,11 +125,17 @@
 				<p class="pt-4 font-light text-gray-400">
 					{events.featured_events[1].description}
 				</p>
-				{#if events.featured_events[1].article}
-					<Button href="/articles/{events.featured_events[1].article}" class="mx-auto mt-4"
-						>Read More</Button
+				<div class="mx-auto mt-4 flex gap-4">
+					<Button
+						variant="secondary"
+						target="_blank"
+						href="https://lightroom.adobe.com/shares/b68ae08650da484d8485673e59c454e3"
+						>Event photos</Button
 					>
-				{/if}
+					{#if events.featured_events[1].article}
+						<Button href="/articles/{events.featured_events[1].article}">Read More</Button>
+					{/if}
+				</div>
 			</div>
 		</button>
 		<button
@@ -162,6 +178,11 @@
 				<p class="pt-4 font-light text-gray-400">
 					{events.featured_events[2].description}
 				</p>
+				{#if events.featured_events[2].article}
+					<Button href="/articles/{events.featured_events[2].article}" class="mx-auto mt-4"
+						>Read More</Button
+					>
+				{/if}
 			</div>
 		</button>
 	</div>

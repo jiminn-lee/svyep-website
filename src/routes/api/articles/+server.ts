@@ -19,10 +19,12 @@ async function getArticles() {
 		}
 	}
 
-	articles = articles.sort(
-		(first, second) =>
-			new Date(second.metadata.date).getTime() - new Date(first.metadata.date).getTime()
-	);
+	articles.reverse();
+
+	// articles = articles.sort(
+	// 	(first, second) =>
+	// 		new Date(second.metadata.date).getTime() - new Date(first.metadata.date).getTime()
+	// );
 
 	return articles;
 }

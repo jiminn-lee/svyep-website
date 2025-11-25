@@ -22,13 +22,6 @@
 		{metadata.title}
 		<div class="flex justify-between font-sans text-lg font-normal text-gray-400">
 			<p>By {metadata.author}</p>
-			<p>
-				{new Date('2024-02-14').toLocaleDateString('en-us', {
-					year: 'numeric',
-					month: 'long',
-					day: 'numeric'
-				})}
-			</p>
 		</div>
 	</h1>
 	<Article />

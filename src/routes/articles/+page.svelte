@@ -89,11 +89,13 @@
 						<h2 class="mt-2">{article.metadata.subtitle}</h2>
 					</a>
 					<a href={`/articles/${article.slug}`} class="h-full w-full cursor-pointer sm:w-1/2">
-						<img
-							src={article.metadata.images[0]}
-							alt={article.metadata.title}
-							class="hover:shadow-glow-blue-hover rounded-3xl outline-1 outline-indigo-600 transition"
-						/>
+						{#if article.metadata.images}
+							<img
+								src={article.metadata.images[0]}
+								alt={article.metadata.title}
+								class="hover:shadow-glow-blue-hover rounded-3xl outline-1 outline-indigo-600 transition"
+							/>
+						{/if}
 					</a>
 				</div>
 				<hr class="text-gray-400/20" />

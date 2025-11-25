@@ -156,7 +156,7 @@
 	<img
 		src="/images/home/stats/Members.webp"
 		alt=""
-		class="shadow-glow-blue absolute top-[200px] left-0 -z-50 h-[250px] rotate-[-10deg] rounded-3xl opacity-30 transition-all 2xl:left-36 2xl:opacity-80"
+		class="shadow-glow-blue absolute top-[200px] left-0 -z-50 h-[250px] rotate-[-10deg] rounded-3xl opacity-30 transition-all xl:opacity-80 2xl:left-36"
 	/>
 	<div
 		class="flex flex-col items-center gap-1 lg:gap-4"
@@ -188,7 +188,7 @@
 	<img
 		src="/images/home/stats/Money Raised.webp"
 		alt=""
-		class="shadow-glow-blue absolute top-[650px] right-0 -z-50 h-[250px] rotate-[10deg] rounded-3xl opacity-30 transition-all sm:top-[500px] 2xl:right-36 2xl:opacity-80"
+		class="shadow-glow-blue absolute top-[650px] right-0 -z-50 h-[250px] rotate-[10deg] rounded-3xl opacity-50 transition-all sm:top-[500px] 2xl:right-36 2xl:opacity-80"
 	/>
 	<div
 		class="flex flex-col items-center gap-4"
@@ -208,7 +208,7 @@
 		</div>
 		<p class="max-w-[500px] px-2 text-center text-sm text-gray-400 lg:text-base">
 			<span class="text-white">
-				We've <span class="bg-indigo-700 font-serif text-white italic">impacted</span> tens of thousands
+				We've <span class="bg-indigo-700 font-serif text-white italic">impacted</span> hundreds of thousands
 				of students and professionals by providing them with access to career-building opportunities
 				and large events.
 			</span> Most notably this year, SVYEP cohosted the largest pitch event in Silicon Valley with thousands
@@ -218,7 +218,7 @@
 	<img
 		src="/images/home/stats/ImpactedStudents.webp"
 		alt=""
-		class="shadow-glow-blue absolute top-[1050px] left-0 -z-50 h-[250px] rotate-[-10deg] rounded-3xl opacity-30 transition-all sm:top-[1000px] 2xl:left-36 2xl:opacity-80"
+		class="shadow-glow-blue absolute top-[1050px] left-0 -z-50 h-[250px] rotate-[-10deg] rounded-3xl opacity-50 transition-all sm:top-[1000px] 2xl:left-36 2xl:opacity-80"
 	/>
 	<div
 		class="flex flex-col-reverse items-center gap-8 lg:flex-row"
@@ -249,7 +249,7 @@
 	<img
 		src="/images/home/stats/Internships.webp"
 		alt=""
-		class="shadow-glow-blue absolute top-[1450px] right-0 -z-50 h-[250px] rotate-[10deg] rounded-3xl opacity-30 transition-all sm:top-[1400px] 2xl:right-36 2xl:opacity-80"
+		class="shadow-glow-blue absolute top-[1450px] right-0 -z-50 h-[250px] rotate-[10deg] rounded-3xl opacity-50 transition-all sm:top-[1400px] 2xl:right-36 2xl:opacity-80"
 	/>
 	<div
 		class="flex flex-col items-center"
@@ -379,74 +379,74 @@
 			>
 		</div>
 	</div> -->
-	<div class="flex flex-col">
-		<div class="z-10 flex flex-col sm:flex-row">
-			<h1
-				class="text-center font-sans text-[7rem] leading-24 font-bold tracking-tighter text-white text-shadow-lg sm:text-[11rem] sm:leading-normal"
-			>
-				01
-			</h1>
-			<h2
-				class="text-center font-serif text-4xl font-semibold text-indigo-600 sm:mt-16 sm:ml-4 sm:text-6xl"
-			>
-				CONNECTIONS
-			</h2>
+	<div class="flex flex-wrap justify-center">
+		<div class="m-8 flex flex-col">
+			<div class="z-10 flex flex-col sm:flex-row">
+				<h1
+					class="text-center font-sans text-[7rem] leading-24 font-bold tracking-tighter text-white text-shadow-lg sm:text-[9rem] sm:leading-normal"
+				>
+					01
+				</h1>
+				<h2
+					class="text-center font-serif text-4xl font-semibold text-indigo-600 sm:mt-16 sm:ml-4 sm:text-5xl"
+				>
+					CONNECTIONS
+				</h2>
+			</div>
+			<div class=" flex flex-col items-center sm:-mt-32 sm:flex-row">
+				<img
+					src="/images/home/S301.webp"
+					alt=""
+					class="my-4 ml-1 h-auto w-[200px] rounded-3xl sm:my-0"
+				/>
+				<ul class="ml-10 list-disc text-lg leading-relaxed text-gray-400 sm:ml-16 sm:text-xl">
+					<li>In-person speaker events</li>
+					<li>Networking sessions</li>
+					<li>Zoom webinars and workshops</li>
+				</ul>
+			</div>
 		</div>
-		<div class=" flex flex-col items-center sm:-mt-32 sm:flex-row">
-			<img
-				src="/images/home/S301.webp"
-				alt=""
-				class="my-4 ml-1 h-auto w-[250px] rounded-3xl sm:my-0"
-			/>
-			<ul class="ml-10 list-disc text-lg leading-relaxed text-gray-400 sm:ml-16 sm:text-2xl">
-				<li>In-person speaker events</li>
-				<li>Networking sessions</li>
-				<li>Zoom webinars and workshops</li>
+		<div class="m-8 flex flex-col items-center sm:items-end">
+			<div
+				class="z-10 flex flex-col-reverse items-center leading-24 sm:flex-row sm:items-start sm:leading-normal"
+			>
+				<h2 class="font-serif text-4xl font-semibold text-indigo-600 sm:mt-16 sm:mr-4 sm:text-5xl">
+					EXPERIENCE
+				</h2>
+				<h1
+					class="font-sans text-[7rem] font-bold tracking-tighter text-white text-shadow-lg sm:text-[9rem]"
+				>
+					02
+				</h1>
+			</div>
+			<div class="flex flex-col-reverse items-center sm:-mt-32 sm:flex-row">
+				<ul class="w-[300px] list-disc text-lg leading-relaxed text-gray-400 sm:text-xl">
+					<li>Paid internships & jobs</li>
+					<li>Volunteer opportunities @ local startups in the Silicon Valley</li>
+					<li>Work alongside industry professionals</li>
+				</ul>
+				<img
+					src="/images/home/S302.webp"
+					alt=""
+					class="my-4 h-auto w-[200px] rounded-3xl sm:my-0 sm:mr-1"
+				/>
+			</div>
+		</div>
+		<div class="m-8 flex flex-col items-center">
+			<h1
+				class="z-10 font-sans text-[7rem] leading-24 font-bold tracking-tighter text-white text-shadow-lg sm:text-[9rem] sm:leading-44"
+			>
+				03
+			</h1>
+			<h2 class="font-serif text-4xl font-semibold text-indigo-600 sm:text-5xl">EDUCATION</h2>
+			<img src="/images/home/S303.webp" alt="" class=" h-auto w-[350px] rounded-3xl sm:w-[350px]" />
+			<ul
+				class="mt-10 w-[300px] list-disc text-lg leading-relaxed text-gray-400 sm:w-[350px] sm:text-xl"
+			>
+				<li>Engage with mentions & peers in student-led workshops</li>
+				<li>Access our nationwide network of schools</li>
 			</ul>
 		</div>
-	</div>
-	<CaretDown size={80} class="animate-bounce text-gray-400" />
-	<div class="flex flex-col items-center sm:items-end">
-		<div
-			class="z-10 flex flex-col-reverse items-center leading-24 sm:flex-row sm:items-start sm:leading-normal"
-		>
-			<h2 class="font-serif text-4xl font-semibold text-indigo-600 sm:mt-16 sm:mr-4 sm:text-6xl">
-				EXPERIENCE
-			</h2>
-			<h1
-				class="font-sans text-[7rem] font-bold tracking-tighter text-white text-shadow-lg sm:text-[11rem]"
-			>
-				02
-			</h1>
-		</div>
-		<div class="flex flex-col-reverse items-center sm:-mt-32 sm:flex-row">
-			<ul class="w-[300px] list-disc text-lg leading-relaxed text-gray-400 sm:mr-10 sm:text-2xl">
-				<li>Paid internships & jobs</li>
-				<li>Volunteer opportunities @ local startups in the Silicon Valley</li>
-				<li>Work alongside industry professionals</li>
-			</ul>
-			<img
-				src="/images/home/S302.webp"
-				alt=""
-				class="my-4 h-auto w-[250px] rounded-3xl sm:my-0 sm:mr-1"
-			/>
-		</div>
-	</div>
-	<CaretDown size={80} class="animate-bounce text-gray-400" />
-	<div class="flex flex-col items-center">
-		<h1
-			class="z-10 font-sans text-[7rem] leading-24 font-bold tracking-tighter text-white text-shadow-lg sm:text-[11rem] sm:leading-44"
-		>
-			03
-		</h1>
-		<h2 class="font-serif text-4xl font-semibold text-indigo-600 sm:text-6xl">EDUCATION</h2>
-		<img src="/images/home/S303.webp" alt="" class=" h-auto w-[300px] rounded-3xl sm:w-[400px]" />
-		<ul
-			class="mt-10 w-[300px] list-disc text-lg leading-relaxed text-gray-400 sm:w-[500px] sm:text-2xl"
-		>
-			<li>Engage with mentions & peers in student-led workshops</li>
-			<li>Access our nationwide network of schools</li>
-		</ul>
 	</div>
 </section>
 
